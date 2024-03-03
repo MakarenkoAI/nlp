@@ -1,0 +1,148 @@
+
+body 
+{
+    background: url(background.png);
+}
+
+.textblack
+{
+    border : 15px solid transparent;  
+    background: linear-gradient(#fff, #fff) padding-box, linear-gradient(90deg, #fff7ad, #ffa9f9) border-box;
+    border-radius: 20px;
+    padding : 5px;
+    margin : auto;
+    width: 600px;
+    display: block;
+    color: #909;
+    height: 250px;
+}
+
+.text 
+{
+    border : 15px solid transparent;  
+    background: linear-gradient(#fff, #fff) padding-box, linear-gradient(90deg, #fff7ad, #ffa9f9) border-box;
+    border-radius: 20px;
+    padding : 5px;
+    margin : auto;
+    width: 600px;
+    display: block;
+    background-color: white;
+    color: #ffe;
+    height: 250px;
+}
+
+input:focus,
+select:focus,
+textarea:focus,
+button:focus 
+{
+    outline: none;
+}
+
+::placeholder
+ { /* Most modern browsers support this now. */
+    color:    #909;
+ }
+
+#result 
+{
+    margin : 10px auto;
+}
+
+
+.right-btn 
+{
+    position: absolute; 
+    right: 0px; 
+    bottom: 0px
+}
+
+.left-btn
+{
+    display: flex;
+    justify-content: center; 
+}
+
+.search
+{
+    width: 150px;
+    height: 38px;
+    margin: 10px 10px 0 10px;
+    padding: 0 0 0 10px;
+    background: linear-gradient(90deg, #ffb6fa, #ade1ff);
+    border-radius: 20px;
+    border : 1px solid #ffffff;
+    color: #ffffff;
+    font-family: "Open Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight:bolder;
+    font-style: normal;
+    font-variation-settings:"wdth" 100;
+}
+
+.btn
+{
+    width: 150px;
+    height: 40px;
+    margin: 10px 10px 0 0;
+    background: linear-gradient(90deg, #ffb6fa, #ade1ff);
+    border-radius: 20px;
+    border : 1px solid #ffffff;
+    color: #ffffff;
+    font-family: "Open Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight:bolder;
+    font-style: normal;
+    font-variation-settings:"wdth" 100;
+    transition: width 0.2s, height 0.2s, margin-top 0.2s, padding 0.2s;
+}
+
+#clean-btn 
+{
+    margin: 10px 0 0 0;
+}
+
+#clean-btn:active 
+{
+    margin-top: 15px;
+}
+
+.btn:active 
+{
+    width: 145px;
+    height: 35px;
+    margin-top: 15px;
+}
+
+.help-btn 
+{
+    width: 200px;
+    height: 200px;
+    border-radius: 20px;
+    margin: 10px;
+    padding: 10px;
+    background-image: url(question.PNG);
+    background-size: cover;
+    border: 1px solid #ffb6fa;
+    transition: margin 0.2s, width 0.2s, height 0.2s;
+}
+
+.help-btn:active
+{
+    width: 190px;
+    height: 190px;
+    margin: 15px;
+}
+
+/* 
+.text::before {
+    content: "";
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    right: -10px;
+    bottom: -10px;
+    background-image:  linear-gradient(90deg, #fff7ad, #ffa9f9);
+    border-radius: 10px;
+    z-index: -1;
+} */
