@@ -10,18 +10,38 @@
     <title>language</title>
 </head>
 <body>
+   
     <div class="fields">
-        <textarea rows="10" cols="50" class="textblack" placeholder="Write some words..."></textarea>
-        <textarea id="result" class="text" readonly></textarea>
+        <form method="POST">
+        {% csrf_token %} 
+            <textarea rows="10" cols="50" class="textblack" id="input_text" name="input_text" placeholder="Write some words...">
+                {%if input%}
+                    {{input}}
+                {%endif%}
+            </textarea>
+            <div class="buttons">
+                <div class="left-btn">
+                    <input type="submit" value="Translate"  class="btn">
+                </div>
+            </div>
+        </form>
+        <textarea id="result" class="textblack" id="output_text" name="output_text" readonly>
+            {%if output%}
+                {{output}}
+            {%endif%}
+        </textarea>
     </div>
+    
     <div class="buttons">
         <div class="left-btn">
-            
-            <button class="btn">Translate</button>
-            <button class="btn">Open</button>
-            <button class="btn">Save</button>
-            <button class="btn" id="clean-btn">Clean</button>
-            <input type="text" class="search" placeholder="Search...">
+             <form method="POST">
+                {% csrf_token %} 
+                 <!---<a href="{%url 'home'%}" class="btn">Open</a>--> 
+                 <input type="submit" value="Clear" name="clear" id="clear" class="btn">
+                 <input type="submit" value="Open" name="open" id="open" class="btn">
+            </form>
+            <input type="submit" value="Save" name="save" id="save" class="btn">
+            <input type="text" class="search" name="search" id="search" placeholder="Search...">
         </div>
         <div class="right-btn">
             <button class="help-btn"></button>

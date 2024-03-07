@@ -49,7 +49,6 @@ button:focus
     margin : 10px auto;
 }
 
-
 .right-btn 
 {
     position: absolute; 
@@ -83,8 +82,11 @@ button:focus
 .btn
 {
     width: 150px;
+    text-align: center;
+    text-decoration: none;
     height: 40px;
-    margin: 10px 10px 0 0;
+    line-height: 40px;
+    margin: 10px 10px 10px 10px;
     background: linear-gradient(90deg, #ffb6fa, #ade1ff);
     border-radius: 20px;
     border : 1px solid #ffffff;
@@ -107,7 +109,7 @@ button:focus
     margin-top: 15px;
 }
 
-.btn:active 
+a.btn:active 
 {
     width: 145px;
     height: 35px;
@@ -134,8 +136,12 @@ button:focus
     margin: 15px;
 }
 
+.container {
+    width: 50%; /* adjust to desired width */
+    margin: 0 auto; /* center the container */
+  }
 /* 
-.text::before {
+.text::besore {
     content: "";
     position: absolute;
     top: -10px;

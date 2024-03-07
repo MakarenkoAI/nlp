@@ -4,19 +4,15 @@ from nltk.text import Text
 from pypdf import PdfReader
 from nltk.corpus import wordnet as wn
 from nltk.draw import *
-from nltk.sentiment import SentimentIntensityAnalyzer
 import re
 import pprint
-from nltk.corpus import state_union
-from nltk.tokenize import PunktSentenceTokenizer
 
 
-nltk.download('gutenberg')
-nltk.download('genesis')
+nltk.download('universal_tagset')
 nltk.download('wordnet')
 nltk.download('vader_lexicon')
 nltk.download('averaged_perceptron_tagger')
-nltk.download('state_union')
+
 
 def percentage(word:str, text:Text): 
     return round(100*text.tokens.count(word)/len(text.tokens), 3)
@@ -30,7 +26,7 @@ def percentage(word:str, text:list):
 def lexical_diversity(text:list):
     return round(len(text)/len(set(text)), 3)
 
-def getPDFContent(path:str):
+def getPDFContent(path:str)-> str:
     reader = PdfReader(path)
     text = ""
     for page in reader.pages:
@@ -79,28 +75,48 @@ def get_split_lines(text:str)-> list:
 
 def get_tokens(text:str)-> list:
     text = get_split_lines(text)
-    return [nltk.pos_tag(line) for line in text]
+    return [nltk.pos_tag(line, tagset='universal') for line in text]
 
-__PATH = "Harry_Potter/HP1.pdf"
+def get_grammar(lines:list)->list:
+    global cp
+    return [cp.parse(line) for line in lines]
 
-#moby = Text(nltk.corpus.gutenberg.words('melville-moby_dick.txt'))
-#moby.concordance("Nick")
+def get_dictionary(rezult:list)->dict:
+    dictionary = {}
+    if len(rezult) == 0: return
+    for sentence in rezult:
+        for lexem in sentence:
+            if lexem[0] not in __SIGNS:
+                dictionary.update({lexem[0].lower() : lexem[1]})   
+    return {key:dictionary[key] for key in sorted(dictionary)}
 
-content = getPDFContent(__PATH)
-split_lines = get_tokens(content)
+def get_text(dictionary:dict)->str:
+    text=""
+    if len(dictionary) == 0 : return
+    for key, value in dictionary.items():
+        text+=f"{key} : {value}\n"
+    return text
 
-grammar = r"""
-  NP: {<DT|PP\$>?<JJ>*<NN>}
-        {<DT>?<JJ>*<NN>}  
-        {<NNP>+}               
-"""
-cp = nltk.RegexpParser(grammar)
-rezult = [cp.parse(line) for line in split_lines]
-[line.draw() for line in rezult]
+def algorithm(text:str):
+    lines = get_tokens(text)
+    dict = get_dictionary(lines)
+    return get_text(dict)
 
-train_text = state_union.raw("2005-GWBush.txt")
-sample_text = state_union.raw("2006-GWBush.txt")
+#__PATH = "app\Harry_Potter\lang.pdf"
 
-custom_sent_tokenizer = PunktSentenceTokenizer(train_text)
+# moby = Text(nltk.corpus.gutenberg.words('melville-moby_dick.txt'))
+# moby.concordance("Nick")
 
-tokenized = custom_sent_tokenizer.tokenize(sample_text)
+# grammar = r"""
+#   NP: {<DT|PP\$>?<JJ>*<NN>}
+#         {<DT>?<JJ>*<NN>}  
+#         {<NNP>+}               
+# """
+# cp = nltk.RegexpParser(grammar)
+# rezult = [cp.parse(line) for line in split_lines]
+
+#[pprint.pprint(rez) for rez in rezult]
+
+__SIGNS = [',', '.', '&', '?', '!', '/', ':', '@', '\'', '`', '’', '-', '—', "”", "“", 's']
+
+#[line.draw() for line in rezult]
