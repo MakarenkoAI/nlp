@@ -5,14 +5,11 @@ from pypdf import PdfReader
 from nltk.corpus import wordnet as wn
 from nltk.draw import *
 import re
-import pprint
-
 
 nltk.download('universal_tagset')
 nltk.download('wordnet')
 nltk.download('vader_lexicon')
 nltk.download('averaged_perceptron_tagger')
-
 
 def percentage(word:str, text:Text): 
     return round(100*text.tokens.count(word)/len(text.tokens), 3)
