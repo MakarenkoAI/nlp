@@ -17,7 +17,7 @@ body
     height: 250px;
 }
 
-.text 
+.text
 {
     border : 15px solid transparent;  
     background: linear-gradient(#fff, #fff) padding-box, linear-gradient(90deg, #fff7ad, #ffa9f9) border-box;
@@ -141,7 +141,7 @@ a.btn:active
     margin: 0 auto; /* center the container */
   }
 /* 
-.text::besore {
+.text::before {
     content: "";
     position: absolute;
     top: -10px;

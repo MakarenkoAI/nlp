@@ -27,6 +27,7 @@ def lexical_diversity(text:list):
     return round(len(text)/len(set(text)), 3)
 
 def getPDFContent(path:str)-> str:
+    print(path)
     reader = PdfReader(path)
     text = ""
     for page in reader.pages:
@@ -102,21 +103,4 @@ def algorithm(text:str):
     dict = get_dictionary(lines)
     return get_text(dict)
 
-#__PATH = "app\Harry_Potter\lang.pdf"
-
-# moby = Text(nltk.corpus.gutenberg.words('melville-moby_dick.txt'))
-# moby.concordance("Nick")
-
-# grammar = r"""
-#   NP: {<DT|PP\$>?<JJ>*<NN>}
-#         {<DT>?<JJ>*<NN>}  
-#         {<NNP>+}               
-# """
-# cp = nltk.RegexpParser(grammar)
-# rezult = [cp.parse(line) for line in split_lines]
-
-#[pprint.pprint(rez) for rez in rezult]
-
 __SIGNS = [',', '.', '&', '?', '!', '/', ':', '@', '\'', '`', '’', '-', '—', "”", "“", 's']
-
-#[line.draw() for line in rezult]

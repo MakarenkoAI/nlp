@@ -10,42 +10,25 @@
     <title>language</title>
 </head>
 <body>
-   
+   <form method="POST" action="/" enctype="multipart/form-data">
+    {% csrf_token %}
     <div class="fields">
-        <form method="POST">
-        {% csrf_token %} 
-            <textarea rows="10" cols="50" class="textblack" id="input_text" name="input_text" placeholder="Write some words...">
-                {%if input%}
-                    {{input}}
-                {%endif%}
-            </textarea>
-            <div class="buttons">
-                <div class="left-btn">
-                    <input type="submit" value="Translate"  class="btn">
-                </div>
-            </div>
-        </form>
-        <textarea id="result" class="textblack" id="output_text" name="output_text" readonly>
-            {%if output%}
-                {{output}}
-            {%endif%}
-        </textarea>
+        <textarea rows="10" cols="50" class="textblack" id="input_text" name="input_text" placeholder="Write some words...">{%if input%}{{input}}{%endif%}</textarea>
+        <textarea id="result" class="textblack" id="output_text" name="output_text" readonly>{%if output%}{{output}}{%endif%}</textarea>
     </div>
-    
     <div class="buttons">
         <div class="left-btn">
-             <form method="POST">
-                {% csrf_token %} 
-                 <!---<a href="{%url 'home'%}" class="btn">Open</a>--> 
-                 <input type="submit" value="Clear" name="clear" id="clear" class="btn">
-                 <input type="submit" value="Open" name="open" id="open" class="btn">
-            </form>
+            <input type="submit" value="Translate"  name="translate" id="translate" class="btn">
+            <input type="submit" value="Clear" name="clear" id="clear" class="btn">
+            <input type="submit" value="Open" name="open" id="open" class="btn">
             <input type="submit" value="Save" name="save" id="save" class="btn">
             <input type="text" class="search" name="search" id="search" placeholder="Search...">
         </div>
         <div class="right-btn">
             <button class="help-btn"></button>
         </div>
+        <input type="file" value="File" name="file" id="file" accept=".pdf">
     </div>
+    </form>
 </body>
 </html>
