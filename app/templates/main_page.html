@@ -24,14 +24,6 @@
             <input type="submit" value="Save" name="save" id="save" class="btn" title="Save the dictionary file">
             <input type="submit" value="Dictionary" name="dictionary" id="dictionary" class="btn" title="Pass to dictionary-page">
         </div>
-        <div class="right-btn">
-            <div>
-            {% if help_text %}
-            <label class="textwhite">{{help_text}}</label>
-            {% endif %}
-            </div>
-            <input type="submit" class="help-btn" name="help" class="textblack" id="help">
-        </div>
         <label class="input-file">
             <input type="file" style="display:none" name="file" id="file" accept=".pdf" title="Choose a file">
             <span type="submit" class="btn"  title="Choose a file">Import</span>

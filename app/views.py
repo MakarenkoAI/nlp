@@ -1,9 +1,5 @@
-from django.http import HttpResponse
 from django.shortcuts import render, redirect
-from django.contrib import messages
-from django.core.files import File
 from app.tools import *
-from .models import File
 
 __INPUT = None
 __OUTPUT = None
@@ -29,9 +25,6 @@ def homePageView(request):
             __OUTPUT = request.POST.get("output_text")
             writeInFile(__OUTPUT)
             return render(request, 'main_page.html', { 'input': __INPUT, "output": __OUTPUT}) 
-        if request.POST.get("help"):
-            text='helptext'
-            return render(request, 'main_page.html', {'help_text': text})
         if request.POST.get("dictionary"):  
             return redirect('dictionary')
         
@@ -53,36 +46,35 @@ def homePageView(request):
         if request.POST.get("return"):
             return render(request, 'main_page.html',  { 'input': __INPUT, "output": __OUTPUT})
         
-        
     return render(request, 'main_page.html')
     
 def dictPageView(request):
     text = ''
-    with open("dictionary.txt", 'r') as file:
+    with open("dictionary.txt", 'r', encoding="utf-8") as file:
         text = file.read()
     return render(request, 'dictionary.html', {'text': text})
 
 def writeInFile(output:str)->str :
-    with open("dictionary.txt", "r") as file:
+    with open("dictionary.txt", "r", encoding="utf-8") as file:
         text = file.read()
         print(text)
         text = text.split('\n')
         text += output.split('\r\n')
         text = list(set(text))
         print(text)
-        with open("dictionary.txt", "w") as fileW:
+        with open("dictionary.txt", "w", encoding="utf-8") as fileW:
             text = '\n'.join(sorted(text))
             print(text)
             fileW.write(text)
     return text
 
 def clearFile():
-    with open("dictionary.txt", "w") as file:
+    with open("dictionary.txt", "w", encoding="utf-8") as file:
        file.write("")
 
 def findLines(substring:str)-> str:
     answer = []
-    with open("dictionary.txt", "r") as file:
+    with open("dictionary.txt", "r", encoding="utf-8") as file:
         text = file.read()
         text = text.split('\n')
         if substring == '.': return '\n'.join(text)
