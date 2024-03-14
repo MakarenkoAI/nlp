@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <base href="http://localhost:8000/" />
+    <link rel="stylesheet" href="static/css/main_page.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <title>language</title>
+</head>
+<body>
+   <form method="POST" action="/" enctype="multipart/form-data">
+    {% csrf_token %}
+    <div class="fields">
+        <textarea class="textblack" id="dict_text" name="dict_text">{%if text %}{{text}}{%endif%}</textarea>
+    </div>
+    <div class="buttons">
+        <div class="left-btn">
+            <input type="submit" value="Clear" name="cleardict" id="cleardict" class="btn"  title="Clear the dictionary">
+            <input type="submit" value="Save" name="savedict" id="savedict" class="btn"  title="Update the dictionary">
+            <input type="text" class="search" name="searchdict" id="searchdict" placeholder="Search..."  title="Search by a substring">
+            <input type="submit" value="Return" name="return" id="return" class="btn"  title="Pass to main-page">
+        </div>
+    </div>
+    </form>
+</body>
+</html>
