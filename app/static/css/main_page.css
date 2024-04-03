@@ -123,14 +123,6 @@ button:focus
     transition: width 0.2s, height 0.2s, margin-top 0.2s, padding 0.2s;
 }
 
-.btn[title]:hover::after {
-    content: attr(title);
-    position: absolute;
-    top: -100%;
-    left: 0;
-    color: pink;
-  }
-
 #clean-btn 
 {
     margin: 10px 0 0 0;

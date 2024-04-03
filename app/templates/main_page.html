@@ -18,16 +18,40 @@
     </div>
     <div class="buttons">
         <div class="left-btn">
-            <input type="submit" value="Translate"  name="translate" id="translate" class="btn" title="Get a dictionary">
-            <input type="submit" value="Clear" name="clear" id="clear" class="btn" title="Clear all windows">
-            <input type="submit" value="Open" name="open" id="open" class="btn" title="Show file in the window">
-            <input type="submit" value="Save" name="save" id="save" class="btn" title="Save the dictionary file">
-            <input type="submit" value="Dictionary" name="dictionary" id="dictionary" class="btn" title="Pass to dictionary-page">
-        </div>
-        <label class="input-file">
+        <label class="input-file btn">
             <input type="file" style="display:none" name="file" id="file" accept=".pdf" title="Choose a file">
-            <span type="submit" class="btn"  title="Choose a file">Import</span>
+            <span type="submit"  title="Choose a file">Import</span>
         </label>
+        <label class="btn">
+            <input type="submit" value="Translate" style="display:none" name="translate" id="translate"  title="Get a dictionary">
+            <span  title="Get a dictionary">Translate</span>
+        </label>
+        <label class="btn">
+            <input type="submit" value="Clear" style="display:none" name="clear" id="clear" title="Clear all windows">
+            <span title="Clear all windows">Clear</span>
+        </label>
+        <label class="btn">
+            <input type="submit" value="Open" style="display:none" name="open" id="open"  title="Show file in the window">
+            <span title="Show file in the window">Open</span>
+        </label>
+        <label class="btn">
+            <input type="submit" value="Save" style="display:none" name="save" id="save" title="Save the dictionary file">
+            <span title="Save the dictionary file">Save</span>
+        </label>
+        <label class="btn">
+            <input type="submit" value="Dictionary" style="display:none" name="dictionary" id="dictionary" title="Pass to dictionary-page">
+            <span title="Pass to dictionary-page">Dictionary</span>
+        </label>
+        <label class="btn">
+            <input type="submit" value="Help" style="display:none" name="help" id="help" title="See the help message">
+            <span title="See the help message">Help</span>
+        </label>
+    </div>
+    {% if help_text %}
+    <div id="some_flag" title="Some Flag">
+        <p>{{help_text}}</p>
+    </div>
+    {% endif %}
     </div>
     </form>
 </body>

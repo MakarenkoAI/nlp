@@ -5,7 +5,10 @@ from pypdf import PdfReader
 from nltk.corpus import wordnet as wn
 from nltk.draw import *
 import re
+import spacy #another open-source library for NLP
+from spacy import displacy
 
+nlp = spacy.load('en_core_web_sm')
 nltk.download('universal_tagset')
 nltk.download('wordnet')
 nltk.download('vader_lexicon')
@@ -62,8 +65,9 @@ def clean_text(text:list)-> list:
         line = re.sub(r'\\n', '', line)
         line = re.sub(r'\s+', ' ', line)
         line = re.sub(r'- ', '', line)
-        symbol = re.search(r"\d+", line)
-        if line != '.' and symbol == None and ']' not in line and '[' not in line:
+        #symbol = re.search(r"\d+", line)
+        #symbol == None
+        if line != '.' and ']' not in line and '[' not in line:
             clean_text.append(line)
     return clean_text
 
@@ -95,9 +99,42 @@ def get_text(dictionary:dict)->str:
         text+=f"{key} : {value}\n"
     return text
 
+def get_text2(dictionary:dict)->str:
+    text=""
+    if len(dictionary) == 0 : return
+    for key, value in dictionary.items():
+        value1, value2, value3 = value[0], value[1], value[2]
+        text+=f"{key:<12} : {value1:<12}{value2:<20}{value3:<12}\n"
+    return text
+
+def algorithm2(text:str):
+    lines = clean_text(get_lines(text))
+    text_dict = get_tags(lines)
+    return get_text2(text_dict)
+
+__SIGNS = [',', '.', '&', '?', '!', '/', ':', '@', '\'', '`', '’', '-', '—', "”", "“", 's', '(', ')', ';']
+
 def algorithm(text:str):
     lines = get_tokens(text)
     dict = get_dictionary(lines)
     return get_text(dict)
 
-__SIGNS = [',', '.', '&', '?', '!', '/', ':', '@', '\'', '`', '’', '-', '—', "”", "“", 's']
+translation_dict = {"nsubj":"subject",
+    "root":"predicative",
+    "ROOT":"predicative",
+    "dobj": "object",
+    "amod":"attribute"}
+
+def get_tags(sentences:str)->dict:
+    text_dict = {}
+    for line in sentences:
+        doc = nlp(line)
+        for token in doc:
+            token_text = token.text
+            token_pos = token.pos_
+            token_dep = token.dep_
+            if translation_dict.get(token.dep_) != None: token_dep = translation_dict[token.dep_]
+            token_head = token.head.text
+            text_dict.update({token_text : [token_pos, token_dep, token_head]})
+    return {key:text_dict[key] for key in sorted(text_dict)}
+  
