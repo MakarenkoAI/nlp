@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,6 +9,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
     <title>language</title>
+    
 </head>
 <body>
    <form method="POST" action="/" enctype="multipart/form-data">
@@ -42,10 +44,8 @@
             <input type="submit" value="Dictionary" style="display:none" name="dictionary" id="dictionary" title="Pass to dictionary-page">
             <span title="Pass to dictionary-page">Dictionary</span>
         </label>
-        <label class="btn">
-            <input type="submit" value="Help" style="display:none" name="help" id="help" title="See the help message">
-            <span title="See the help message">Help</span>
-        </label>
+       
+
     </div>
     {% if help_text %}
     <div id="some_flag" title="Some Flag">
@@ -54,5 +54,138 @@
     {% endif %}
     </div>
     </form>
+    <!-- <textarea id="siteInfo" style="display: none;">Your site information goes here...</textarea>
+    <button onclick="toggleModal()">Open/Close Modal</button>
+
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span onclick="toggleModal()" style="float: right;">&times;</span>
+            <div id="modalText"></div>
+        </div>
+    </div>
+
+    <script>
+        function toggleModal() {
+            var modal = document.getElementById('myModal');
+            var modalText = document.getElementById('modalText');
+            var siteInfo = document.getElementById('siteInfo').value;
+            modalText.textContent = siteInfo;
+            
+            if (modal.style.display === 'none' || modal.style.display === '') {
+                modal.style.display = 'block';
+            } else {
+                modal.style.display = 'none';
+            }
+        }
+    </script> -->
+
+
+    <!-- <button id="info-button">Показать информацию</button>
+    <div id="info-popup" class="popup">
+        <div class="popup-content">
+          <span class="close">&times;</span>
+          <h2>Информация о сайте</h2>
+          <p>Ваша информация о сайте здесь...</p>
+        </div>
+      </div>
+    <script>
+        document.getElementById("info-button").onclick = function() {
+        document.getElementById("info-popup").style.display = "block";
+        }
+
+        document.getElementsByClassName("close")[0].onclick = function() {
+        document.getElementById("info-popup").style.display = "none";
+        }
+
+        window.onclick = function(event) {
+        if (event.target == document.getElementById("info-popup")) {
+            document.getElementById("info-popup").style.display = "none";
+        }
+        }
+    </script> -->
+    <!-- <button id="openModal">Show Site Information</button>
+
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span class="close" id="closeModal">&times;</span>
+            <h2>Site Information</h2>
+            <p>Here you can add information about your site.</p>
+        </div>
+    </div>
+
+    <script>
+        var modal = document.getElementById("myModal");
+        var btn = document.getElementById("openModal");
+        var span = document.getElementById("closeModal");
+
+        btn.onclick = function() {
+            modal.style.display = "block";
+        }
+
+        span.onclick = function() {
+            modal.style.display = "none";
+        }
+
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script> -->
+
+    <!-- <button id="infoButton">Показать информацию о сайте</button>
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <p>Информация о сайте.</p>
+        </div>
+    </div>
+      <script>
+       var modal = document.getElementById("myModal");
+        var btn = document.getElementById("infoButton");
+        var span = document.getElementsByClassName("close")[0];
+        
+        btn.onclick = function() {
+            modal.style.display = "block";
+        }
+        
+        span.onclick = function() {
+            modal.style.display = "none";
+        }
+        
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+        </script> -->
+
+        <div id="popup">
+            <div class="popup-content">
+        
+            <textarea id="help" readonly></textarea> 
+            </div>
+          </div>
+          <button id="toggle-popup">?</button>
+          <script>
+            document.addEventListener('DOMContentLoaded', function() {
+            var toggleButton = document.getElementById('toggle-popup');
+            var popup = document.getElementById('popup');
+            popup.style.display = 'none';
+            toggleButton.addEventListener('click', function() {
+                if (popup.style.display === 'block') {
+                popup.style.display = 'none';
+                } else {
+                popup.style.display = 'block';
+                }
+            });
+            });
+          </script>
+          <script>
+            const textarea = document.getElementById("help");
+            const list = ["Алгоритм получения славоря:", "1)Нажать кнопку \"Import\"", "2)Нажать кнопку \"Open\"", "3)Нажать кнопку \"Translate\"", "4)Нажать кнопку \"Save\"", "5)Нажать кнопку \"Dictionary\" чтобы перейти в созданный словарь", "", "Кнопка \"Clear\" полностью удаляет созданный словарь"];
+            const listString = list.join("\n");
+            textarea.value = listString;
+          </script>
 </body>
 </html>

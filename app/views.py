@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect
 from app.tools import *
-
+from django.http import HttpResponse
 __INPUT = None
 __OUTPUT = None
 
@@ -98,3 +98,5 @@ def findLines(substring:str)-> str:
             if substring in line:
                 answer.append(line)
     return '\n'.join(answer)
+
+
