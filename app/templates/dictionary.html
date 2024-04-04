@@ -25,5 +25,32 @@
         </div>
     </div>
     </form>
+    <div id="popup">
+        <div class="popup-content">
+    
+        <textarea id="help" readonly></textarea> 
+        </div>
+      </div>
+      <button id="toggle-popup">?</button>
+      <script>
+        document.addEventListener('DOMContentLoaded', function() {
+        var toggleButton = document.getElementById('toggle-popup');
+        var popup = document.getElementById('popup');
+        popup.style.display = 'none';
+        toggleButton.addEventListener('click', function() {
+            if (popup.style.display === 'block') {
+            popup.style.display = 'none';
+            } else {
+            popup.style.display = 'block';
+            }
+        });
+        });
+      </script>
+      <script>
+        const textarea = document.getElementById("help");
+        const list = ["Алгоритм взаимодействия со славорём:", "1)В поле \"Search\" написать искомый элемент", "2)В главном окне выведутся все элементы поиска", "", "Кнопка \"Save\" сохраняет изменения, внесённые в словарь", "","Кнопка \"Clear\" полностью удаляет созданный словарь", "", "Кнопка \"Return\" возвращает на главный экран"];
+        const listString = list.join("\n");
+        textarea.value = listString;
+      </script>
 </body>
 </html>
