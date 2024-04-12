@@ -1,148 +1,1575 @@
-(            : PUNCT       punct               pass        
-)            : PUNCT       punct               school      
-,            : PUNCT       punct               are         
--200         : PROPN       nummod              pupils      
--school      : NOUN        compound            education   
-.            : PUNCT       punct               live        
-1.200        : NUM         nummod              pupils      
-11           : NUM         pobj                of          
-12           : NUM         nummod              years       
-18           : NUM         nummod              years       
-2.500        : NUM         nummod              pupils      
-5            : NUM         nummod              years       
-50           : NUM         compound            -200        
-7            : NUM         quantmod            18          
-8            : NUM         quantmod            11          
-80           : NUM         nummod              percent     
-9            : NUM         quantmod            12          
-Children     : NOUN        subject             start       
-England      : PROPN       pobj                In          
-English      : PROPN       nmod                system      
-In           : ADP         prep                called      
-Only         : ADV         advmod              5           
-Parents      : NOUN        predicative         Parents     
-Primary      : ADJ         attribute           schools     
-Public       : ADJ         attribute           schools     
-Pupils       : NOUN        subject             live        
-School       : NOUN        subject             lasts       
-Scotland     : PROPN       subject             has         
-Secondary    : ADJ         attribute           schools     
-Some         : DET         det                 schools     
-The          : DET         det                 schools     
-There        : PRON        expl                are         
-These        : DET         det                 schools     
-They         : PRON        subject             are         
-UK           : PROPN       pobj                in          
-Wales        : PROPN       conj                England     
-Welsh        : PROPN       conj                English     
-a            : DET         det                 school      
-age          : NOUN        pobj                at          
-all          : DET         det                 day         
-an           : DET         det                 exam        
-and          : CCONJ       cc                  live        
-apple : NOUN     
-are          : AUX         conj                are         
-areas        : NOUN        pobj                In          
-at           : ADP         prep                go          
-before       : ADP         prep                education   
-boarding     : NOUN        compound            schools     
-but          : CCONJ       cc                  are         
-called       : VERB        predicative         called      
-cent         : NOUN        subject             goes        
-children     : NOUN        conj                schools     
-comprehensive : ADJ         attribute           school      
-day          : NOUN        compound            schools     
-different    : ADJ         acomp               is          
-divided      : VERB        predicative         divided     
-do           : AUX         aux                 need        
-education    : NOUN        object              prefer      
-exam         : NOUN        object              pass        
-example      : NOUN        pobj                for         
-exams        : NOUN        object              pass        
-expensive    : ADJ         acomp               are         
-families     : NOUN        pobj                for         
-five         : NUM         pobj                of          
-for          : ADP         prep                are         
-four         : NUM         nummod              types       
-free         : ADJ         attribute           education   
-from         : ADP         prep                pils        
-go           : VERB        conj                live        
-goes         : VERB        predicative         goes        
-grammar      : NOUN        compound            schools     
-has          : VERB        predicative         has         
-have         : VERB        predicative         have        
-holidays     : NOUN        pobj                in          
-home         : ADV         advmod              go          
-in           : ADP         prep                go          
-infant       : NOUN        compound            school      
-instead      : ADV         advmod              of          
-into         : ADP         prep                divided     
-ior          : PRON        nummod              schools     
-is           : VERB        predicative         is          
-its          : PRON        poss                system      
-jun          : PROPN       conj                schools     
-junior       : ADJ         attribute           school      
-l            : NOUN        compound            pay         
-large        : ADJ         acomp               are         
-larger       : ADJ         acomp               are         
-lasts        : VERB        ccomp               is          
-live         : VERB        predicative         live        
-many         : ADJ         attribute           schools     
-middle       : ADJ         attribute           schools     
-most         : ADJ         attribute           children    
-much         : ADV         advmod              larger      
-must         : AUX         aux                 pass        
-need         : VERB        predicative         need        
-not          : PART        neg                 need        
-nursery      : NOUN        compound            schools     
-of           : ADP         prep                cent        
-old          : ADJ         attribute           from        
-one          : NUM         nummod              shift       
-only         : ADV         advmod              one         
-or           : CCONJ       cc                  5           
-over         : ADP         quantmod            80          
-own          : ADJ         attribute           system      
-parent       : NOUN        pobj                with        
-parents      : NOUN        subject             prefer      
-pass         : VERB        predicative         pass        
-pay          : NOUN        pobj                to          
-pecial       : ADJ         attribute           exams       
-per          : ADP         nmod                cent        
-percent      : NOUN        subject             go          
-pils         : NOUN        pobj                for         
-population   : NOUN        pobj                of          
-prefer       : VERB        predicative         prefer      
-primary      : ADJ         attribute           schools     
-private      : ADJ         attribute           schools     
-pu           : PROPN       compound            pils        
-public       : ADJ         attribute           schools     
-pupils       : NOUN        pobj                from        
-s            : PART        punct               pass        
-schoo        : VERB        attribute           pay         
-school       : NOUN        pobj                in          
-schools      : NOUN        attr                are         
-secondary    : ADJ         attribute           schools     
-shift        : NOUN        attr                is          
-so           : ADV         mark                is          
-some         : DET         det                 areas       
-start        : VERB        predicative         start       
-state        : NOUN        compound            schools     
-system       : NOUN        object              has         
-take         : VERB        relcl               schools     
-than         : ADP         prep                larger      
-that         : DET         det                 age         
-the          : DET         det                 holidays    
-their        : PRON        poss                children    
-there        : PRON        expl                are         
-these        : DET         det                 schools     
-to           : PART        quantmod            18          
-types        : NOUN        attr                are         
-under        : ADP         prep                go          
-usually      : ADV         advmod              are         
-very         : ADV         advmod              expensive   
-want         : VERB        relcl               Parents     
-which        : PRON        subject             take        
-who          : PRON        subject             want        
-with         : ADP         prep                families    
-years        : NOUN        npadvmod            old    
-years        : NOUN        npadvmod            old         
+!
+	lexem: !
+	part: PUNCT
+	part: punct
+	depends: hope
+,
+	lexem: ,
+	part: PUNCT
+	part: punct
+	depends: hope
+-
+	lexem: -
+	part: PUNCT
+	part: punct
+	depends: tree
+.
+	lexem: .
+	part: PUNCT
+	part: punct
+	depends: let
+.bib
+	lexem: .bib
+	part: NOUN
+	part: pobj
+	depends: of
+1
+	lexem: 1
+	part: NUM
+	part: predicative
+	depends: 1
+?
+	lexem: ?
+	part: PUNCT
+	part: punct
+	depends: in
+Add
+	lexem: add
+	part: ADJ
+	part: attribute
+	depends: comment
+BibTeX
+	lexem: bibtex
+	part: NUM
+	part: nummod
+	depends: entries
+BibTeX.
+	lexem: bibtex.
+	part: ADV
+	part: pobj
+	depends: about
+Comments
+	lexem: comment
+	part: NOUN
+	part: nsubjpass
+	depends: added
+Contact
+	lexem: Contact
+	part: PROPN
+	part: compound
+	depends: Us
+Editor
+	lexem: Editor
+	part: PROPN
+	part: object
+	depends: using
+Examples
+	lexem: example
+	part: NOUN
+	part: nsubjpass
+	depends: listed
+Figure
+	lexem: Figure
+	part: PROPN
+	part: pobj
+	depends: for
+First
+	lexem: first
+	part: ADV
+	part: advmod
+	depends: have
+For
+	lexem: for
+	part: ADP
+	part: prep
+	depends: formatted
+If
+	lexem: if
+	part: SCONJ
+	part: mark
+	depends: have
+In
+	lexem: in
+	part: ADP
+	part: prep
+	depends: ’s
+JabRef
+	lexem: JabRef
+	part: PROPN
+	part: pobj
+	depends: as
+Just
+	lexem: just
+	part: ADV
+	part: advmod
+	depends: remember
+Mendeley
+	lexem: Mendeley
+	part: PROPN
+	part: nmod
+	depends: library
+Note
+	lexem: note
+	part: VERB
+	part: predicative
+	depends: Note
+Once
+	lexem: once
+	part: SCONJ
+	part: mark
+	depends: ’re
+Overleaf
+	lexem: Overleaf
+	part: PROPN
+	part: compound
+	depends: menu
+PDF
+	lexem: PDF
+	part: PROPN
+	part: compound
+	depends: preview
+Please
+	lexem: please
+	part: INTJ
+	part: intj
+	depends: let
+Recompile
+	lexem: Recompile
+	part: PROPN
+	part: compound
+	depends: button
+Reply
+	lexem: Reply
+	part: PROPN
+	part: compound
+	depends: button
+Review
+	lexem: Review
+	part: PROPN
+	part: compound
+	depends: pane
+See
+	lexem: see
+	part: VERB
+	part: predicative
+	depends: See
+Simply
+	lexem: simply
+	part: ADV
+	part: advmod
+	depends: use
+Table
+	lexem: Table
+	part: PROPN
+	part: object
+	depends: see
+Then
+	lexem: then
+	part: ADV
+	part: advmod
+	depends: use
+To
+	lexem: to
+	part: PART
+	part: aux
+	depends: change
+Track
+	lexem: track
+	part: NOUN
+	part: compound
+	depends: changes
+Us
+	lexem: Us
+	part: PROPN
+	part: compound
+	depends: link
+Use
+	lexem: use
+	part: VERB
+	part: predicative
+	depends: Use
+Usually
+	lexem: usually
+	part: ADV
+	part: advmod
+	depends: have
+Visual
+	lexem: Visual
+	part: PROPN
+	part: compound
+	depends: Editor
+We
+	lexem: we
+	part: PRON
+	part: subject
+	depends: hope
+With
+	lexem: with
+	part: ADP
+	part: prep
+	depends: handled
+You
+	lexem: you
+	part: PRON
+	part: subject
+	depends: find
+Your
+	lexem: your
+	part: PRON
+	part: poss
+	depends: introduction
+Zotero
+	lexem: Zotero
+	part: PROPN
+	part: conj
+	depends: Mendeley
+a
+	lexem: a
+	part: DET
+	part: det
+	depends: look
+a.bib
+	lexem: a.bib
+	part: NUM
+	part: nummod
+	depends: file
+about
+	lexem: about
+	part: ADP
+	part: prep
+	depends: learn
+above
+	lexem: above
+	part: ADV
+	part: advmod
+	depends: toolbar
+accessed
+	lexem: access
+	part: VERB
+	part: advcl
+	depends: find
+according
+	lexem: accord
+	part: VERB
+	part: prep
+	depends: formatted
+accordingly
+	lexem: accordingly
+	part: ADV
+	part: advmod
+	depends: adjust
+account
+	lexem: account
+	part: NOUN
+	part: object
+	depends: have
+add
+	lexem: add
+	part: VERB
+	part: acl
+	depends: command
+added
+	lexem: add
+	part: VERB
+	part: predicative
+	depends: added
+adding
+	lexem: add
+	part: VERB
+	part: pcomp
+	depends: about
+adjust
+	lexem: adjust
+	part: VERB
+	part: conj
+	depends: scroll
+all
+	lexem: all
+	part: DET
+	part: predet
+	depends: plans
+allow
+	lexem: allow
+	part: VERB
+	part: predicative
+	depends: allow
+along
+	lexem: along
+	part: ADP
+	part: prep
+	depends: keep
+also
+	lexem: also
+	part: ADV
+	part: advmod
+	depends: let
+alter
+	lexem: alter
+	part: VERB
+	part: xcomp
+	depends: like
+an
+	lexem: an
+	part: DET
+	part: det
+	depends: account
+and
+	lexem: and
+	part: CCONJ
+	part: cc
+	depends: tutorials
+any
+	lexem: any
+	part: DET
+	part: det
+	depends: feedback
+appropriate
+	lexem: appropriate
+	part: ADJ
+	part: attribute
+	depends: place
+are
+	lexem: be
+	part: AUX
+	part: predicative
+	depends: are
+article
+	lexem: article
+	part: NOUN
+	part: object
+	depends: visit
+as
+	lexem: as
+	part: ADP
+	part: prep
+	depends: import
+at
+	lexem: at
+	part: ADP
+	part: prep
+	depends: use
+automatic
+	lexem: automatic
+	part: ADJ
+	part: attribute
+	depends: numbering
+automatically
+	lexem: automatically
+	part: ADV
+	part: advmod
+	depends: placed
+available
+	lexem: available
+	part: ADJ
+	part: acomp
+	depends: are
+babel
+	lexem: babel
+	part: NOUN
+	part: compound
+	depends: package
+basic
+	lexem: basic
+	part: ADJ
+	part: attribute
+	depends: tables
+be
+	lexem: be
+	part: AUX
+	part: auxpass
+	depends: formatted
+being
+	lexem: be
+	part: AUX
+	part: pcomp
+	depends: for
+below
+	lexem: below
+	part: ADV
+	part: advmod
+	depends: listed
+best
+	lexem: good
+	part: ADJ
+	part: acomp
+	depends: ’s
+bibliography
+	lexem: bibliography
+	part: NOUN
+	part: compound
+	depends: style
+bottom
+	lexem: bottom
+	part: NOUN
+	part: pobj
+	depends: at
+button
+	lexem: button
+	part: NOUN
+	part: pobj
+	depends: on
+buttons
+	lexem: button
+	part: NOUN
+	part: pobj
+	depends: via
+by
+	lexem: by
+	part: ADP
+	part: agent
+	depends: provided
+can
+	lexem: can
+	part: AUX
+	part: aux
+	depends: import
+caption
+	lexem: caption
+	part: NOUN
+	part: conj
+	depends: number
+case
+	lexem: case
+	part: NOUN
+	part: pobj
+	depends: for
+cases
+	lexem: case
+	part: NOUN
+	part: pobj
+	depends: In
+change
+	lexem: change
+	part: VERB
+	part: advcl
+	depends: open
+changes
+	lexem: change
+	part: NOUN
+	part: subject
+	depends: allow
+check
+	lexem: check
+	part: NOUN
+	part: compound
+	depends: setting
+choose
+	lexem: choose
+	part: VERB
+	part: advcl
+	depends: head
+chosen
+	lexem: choose
+	part: VERB
+	part: relcl
+	depends: template
+cite
+	lexem: cite
+	part: VERB
+	part: predicative
+	depends: cite
+click
+	lexem: click
+	part: VERB
+	part: predicative
+	depends: click
+clicking
+	lexem: click
+	part: VERB
+	part: pcomp
+	depends: by
+close
+	lexem: close
+	part: VERB
+	part: predicative
+	depends: close
+code
+	lexem: code
+	part: NOUN
+	part: object
+	depends: See
+command
+	lexem: command
+	part: NOUN
+	part: conj
+	depends: environment
+commands
+	lexem: command
+	part: NOUN
+	part: conj
+	depends: section
+comment
+	lexem: comment
+	part: NOUN
+	part: pobj
+	depends: of
+comments
+	lexem: comment
+	part: NOUN
+	part: object
+	depends: view
+common
+	lexem: common
+	part: ADJ
+	part: attribute
+	depends: way
+commonly
+	lexem: commonly
+	part: ADV
+	part: advmod
+	depends: used
+computer
+	lexem: computer
+	part: NOUN
+	part: pobj
+	depends: from
+configure
+	lexem: configure
+	part: VERB
+	part: advcl
+	depends: edit
+contact
+	lexem: contact
+	part: NOUN
+	part: compound
+	depends: form
+containing
+	lexem: contain
+	part: VERB
+	part: acl
+	depends: file
+corner
+	lexem: corner
+	part: NOUN
+	part: pobj
+	depends: in
+correctly
+	lexem: correctly
+	part: ADV
+	part: advmod
+	depends: set
+create
+	lexem: create
+	part: VERB
+	part: predicative
+	depends: create
+created
+	lexem: create
+	part: VERB
+	part: acl
+	depends: entries
+different
+	lexem: different
+	part: ADJ
+	part: attribute
+	depends: options
+directly
+	lexem: directly
+	part: ADV
+	part: advmod
+	depends: as
+do
+	lexem: do
+	part: AUX
+	part: aux
+	depends: take
+document
+	lexem: document
+	part: NOUN
+	part: compound
+	depends: language
+documentation
+	lexem: documentation
+	part: NOUN
+	part: conj
+	depends: guides
+documents
+	lexem: document
+	part: NOUN
+	part: pobj
+	depends: to
+done
+	lexem: do
+	part: VERB
+	part: advcl
+	depends: clicking
+down
+	lexem: down
+	part: ADP
+	part: prt
+	depends: scroll
+edit
+	lexem: edit
+	part: VERB
+	part: predicative
+	depends: edit
+editor
+	lexem: editor
+	part: NOUN
+	part: compound
+	depends: window
+entries
+	lexem: entry
+	part: NOUN
+	part: object
+	depends: cite
+environment
+	lexem: environment
+	part: NOUN
+	part: object
+	depends: Use
+environments
+	lexem: environment
+	part: NOUN
+	part: object
+	depends: tabular
+every
+	lexem: every
+	part: DET
+	part: det
+	depends: change
+example
+	lexem: example
+	part: NOUN
+	part: compound
+	depends: project
+existing
+	lexem: existing
+	part: ADJ
+	part: attribute
+	depends: comments
+familiar
+	lexem: familiar
+	part: ADJ
+	part: acomp
+	depends: ’re
+features
+	lexem: feature
+	part: NOUN
+	part: conj
+	depends: commands
+feedback
+	lexem: feedback
+	part: NOUN
+	part: object
+	depends: have
+figure
+	lexem: figure
+	part: NOUN
+	part: nsubjpass
+	depends: placed
+figures
+	lexem: figure
+	part: NOUN
+	part: object
+	depends: taking
+file
+	lexem: file
+	part: NOUN
+	part: compound
+	depends: tree
+filename
+	lexem: filename
+	part: NOUN
+	part: object
+	depends: specify
+filetree
+	lexem: filetree
+	part: NOUN
+	part: compound
+	depends: menu
+find
+	lexem: find
+	part: VERB
+	part: ccomp
+	depends: hope
+for
+	lexem: for
+	part: ADP
+	part: prep
+	depends: library
+form
+	lexem: form
+	part: NOUN
+	part: object
+	depends: use
+formatted
+	lexem: format
+	part: VERB
+	part: predicative
+	depends: formatted
+formatting
+	lexem: formatting
+	part: NOUN
+	part: nsubjpass
+	depends: handled
+from
+	lexem: from
+	part: ADP
+	part: prep
+	depends: entries
+further
+	lexem: further
+	part: ADJ
+	part: attribute
+	depends: documentation
+general
+	lexem: general
+	part: ADJ
+	part: attribute
+	depends: template
+geometry
+	lexem: geometry
+	part: NOUN
+	part: compound
+	depends: package
+get
+	lexem: get
+	part: AUX
+	part: auxpass
+	depends: started
+given
+	lexem: give
+	part: VERB
+	part: prep
+	depends: Note
+goes
+	lexem: go
+	part: VERB
+	part: predicative
+	depends: goes
+guides
+	lexem: guide
+	part: NOUN
+	part: conj
+	depends: tutorials
+handled
+	lexem: handle
+	part: VERB
+	part: predicative
+	depends: handled
+have
+	lexem: have
+	part: VERB
+	part: ccomp
+	depends: know
+head
+	lexem: head
+	part: VERB
+	part: conj
+	depends: visit
+help
+	lexem: help
+	part: NOUN
+	part: compound
+	depends: library
+here
+	lexem: here
+	part: ADV
+	part: advmod
+	depends: tutorial
+highlighting
+	lexem: highlight
+	part: VERB
+	part: pcomp
+	depends: by
+hope
+	lexem: hope
+	part: VERB
+	part: predicative
+	depends: hope
+how
+	lexem: how
+	part: SCONJ
+	part: advmod
+	depends: adjust
+however
+	lexem: however
+	part: ADV
+	part: advmod
+	depends: using
+https://www.overleaf.com/contact
+	lexem: https://www.overleaf.com/contact
+	part: X
+	part: pobj
+	depends: at
+if
+	lexem: if
+	part: SCONJ
+	part: mark
+	depends: have
+image
+	lexem: image
+	part: NOUN
+	part: compound
+	depends: file
+images
+	lexem: image
+	part: NOUN
+	part: pobj
+	depends: including
+import
+	lexem: import
+	part: VERB
+	part: predicative
+	depends: import
+in
+	lexem: in
+	part: ADP
+	part: prep
+	depends: menu
+include
+	lexem: include
+	part: VERB
+	part: xcomp
+	depends: use
+includegraphics
+	lexem: includegraphic
+	part: NOUN
+	part: compound
+	depends: command
+including
+	lexem: include
+	part: VERB
+	part: prep
+	depends: languages
+information
+	lexem: information
+	part: NOUN
+	part: pobj
+	depends: For
+international
+	lexem: international
+	part: ADJ
+	part: attribute
+	depends: support
+into
+	lexem: into
+	part: ADP
+	part: prep
+	depends: taking
+introduction
+	lexem: introduction
+	part: NOUN
+	part: subject
+	depends: goes
+is
+	lexem: be
+	part: AUX
+	part: predicative
+	depends: is
+it
+	lexem: it
+	part: PRON
+	part: pobj
+	depends: from
+its
+	lexem: its
+	part: PRON
+	part: poss
+	depends: name
+journal
+	lexem: journal
+	part: NOUN
+	part: compound
+	depends: publisher
+keep
+	lexem: keep
+	part: VERB
+	part: ccomp
+	depends: allow
+know
+	lexem: know
+	part: VERB
+	part: ccomp
+	depends: let
+language
+	lexem: language
+	part: NOUN
+	part: object
+	depends: change
+languages
+	lexem: language
+	part: NOUN
+	part: pobj
+	depends: including
+learn
+	lexem: learn
+	part: VERB
+	part: advcl
+	depends: find
+left
+	lexem: left
+	part: NOUN
+	part: pobj
+	depends: at
+let
+	lexem: let
+	part: VERB
+	part: predicative
+	depends: let
+library
+	lexem: library
+	part: NOUN
+	part: pobj
+	depends: at
+like
+	lexem: like
+	part: ADP
+	part: prep
+	depends: cite
+link
+	lexem: link
+	part: NOUN
+	part: object
+	depends: using
+listed
+	lexem: list
+	part: VERB
+	part: predicative
+	depends: listed
+lists
+	lexem: list
+	part: NOUN
+	part: object
+	depends: make
+loaded
+	lexem: load
+	part: VERB
+	part: acl
+	depends: package
+look
+	lexem: look
+	part: NOUN
+	part: object
+	depends: take
+lower
+	lexem: low
+	part: ADJ
+	part: attribute
+	depends: corner
+made
+	lexem: make
+	part: VERB
+	part: acl
+	depends: change
+make
+	lexem: make
+	part: VERB
+	part: predicative
+	depends: make
+making
+	lexem: make
+	part: VERB
+	part: pcomp
+	depends: with
+many
+	lexem: many
+	part: ADJ
+	part: attribute
+	depends: languages
+margins
+	lexem: margin
+	part: NOUN
+	part: conj
+	depends: size
+may
+	lexem: may
+	part: AUX
+	part: aux
+	depends: be
+menu
+	lexem: menu
+	part: NOUN
+	part: pobj
+	depends: of
+more
+	lexem: more
+	part: ADJ
+	part: attribute
+	depends: tutorials
+most
+	lexem: most
+	part: ADV
+	part: advmod
+	depends: appropriate
+multiple
+	lexem: multiple
+	part: ADJ
+	part: attribute
+	depends: languages
+name
+	lexem: name
+	part: NOUN
+	part: object
+	depends: clicking
+new
+	lexem: new
+	part: ADJ
+	part: attribute
+	depends: section
+not
+	lexem: not
+	part: PART
+	part: neg
+	depends: alter
+number
+	lexem: number
+	part: NOUN
+	part: object
+	depends: add
+numbering
+	lexem: numbering
+	part: NOUN
+	part: pobj
+	depends: with
+of
+	lexem: of
+	part: ADP
+	part: prep
+	depends: bottom
+off
+	lexem: off
+	part: ADV
+	part: conj
+	depends: on
+on
+	lexem: on
+	part: ADP
+	part: prep
+	depends: visit
+one
+	lexem: one
+	part: NUM
+	part: nummod
+	depends: document
+open
+	lexem: open
+	part: VERB
+	part: predicative
+	depends: open
+option
+	lexem: option
+	part: NOUN
+	part: object
+	depends: edit
+options
+	lexem: option
+	part: NOUN
+	part: pobj
+	depends: about
+or
+	lexem: or
+	part: CCONJ
+	part: cc
+	depends: have
+other
+	lexem: other
+	part: ADJ
+	part: attribute
+	depends: figures
+our
+	lexem: our
+	part: PRON
+	part: poss
+	depends: library
+out
+	lexem: out
+	part: ADP
+	part: prt
+	depends: find
+package
+	lexem: package
+	part: NOUN
+	part: pobj
+	depends: to
+page
+	lexem: page
+	part: NOUN
+	part: compound
+	depends: size
+pane
+	lexem: pane
+	part: NOUN
+	part: pobj
+	depends: of
+paper
+	lexem: paper
+	part: NOUN
+	part: compound
+	depends: size
+person
+	lexem: person
+	part: NOUN
+	part: subject
+	depends: making
+place
+	lexem: place
+	part: NOUN
+	part: pobj
+	depends: in
+placed
+	lexem: place
+	part: VERB
+	part: ccomp
+	depends: Note
+plan
+	lexem: plan
+	part: NOUN
+	part: object
+	depends: choose
+plans
+	lexem: plan
+	part: NOUN
+	part: pobj
+	depends: on
+please
+	lexem: please
+	part: INTJ
+	part: intj
+	depends: visit
+preamble
+	lexem: preamble
+	part: NOUN
+	part: pobj
+	depends: in
+premium
+	lexem: premium
+	part: NOUN
+	part: compound
+	depends: plans
+preview
+	lexem: preview
+	part: NOUN
+	part: object
+	depends: view
+project
+	lexem: project
+	part: NOUN
+	part: pobj
+	depends: of
+provided
+	lexem: provide
+	part: VERB
+	part: acl
+	depends: option
+publisher
+	lexem: publisher
+	part: NOUN
+	part: pobj
+	depends: by
+remember
+	lexem: remember
+	part: VERB
+	part: predicative
+	depends: remember
+reply
+	lexem: reply
+	part: VERB
+	part: advcl
+	depends: click
+requirements
+	lexem: requirement
+	part: NOUN
+	part: pobj
+	depends: to
+reviewing
+	lexem: review
+	part: VERB
+	part: xcomp
+	depends: done
+right
+	lexem: right
+	part: ADJ
+	part: attribute
+	depends: corner
+scroll
+	lexem: scroll
+	part: VERB
+	part: conj
+	depends: open
+section
+	lexem: section
+	part: NOUN
+	part: pobj
+	depends: in
+see
+	lexem: see
+	part: VERB
+	part: predicative
+	depends: see
+set
+	lexem: set
+	part: VERB
+	part: acl
+	depends: margins
+setting
+	lexem: setting
+	part: NOUN
+	part: pobj
+	depends: to
+settings
+	lexem: setting
+	part: NOUN
+	part: object
+	depends: adjust
+simply
+	lexem: simply
+	part: ADV
+	part: advmod
+	depends: upload
+size
+	lexem: size
+	part: NOUN
+	part: pobj
+	depends: on
+so
+	lexem: so
+	part: ADV
+	part: advmod
+	depends: do
+some
+	lexem: some
+	part: DET
+	part: det
+	depends: text
+specify
+	lexem: specify
+	part: VERB
+	part: xcomp
+	depends: remember
+spell
+	lexem: spell
+	part: NOUN
+	part: compound
+	depends: setting
+start
+	lexem: start
+	part: VERB
+	part: predicative
+	depends: start
+started
+	lexem: start
+	part: VERB
+	part: ccomp
+	depends: help
+style
+	lexem: style
+	part: NOUN
+	part: object
+	depends: specify
+subsection
+	lexem: subsection
+	part: NOUN
+	part: compound
+	depends: commands
+subsections
+	lexem: subsection
+	part: NOUN
+	part: conj
+	depends: section
+such
+	lexem: such
+	part: ADJ
+	part: attribute
+	depends: as
+support
+	lexem: support
+	part: NOUN
+	part: pobj
+	depends: on
+supports
+	lexem: support
+	part: VERB
+	part: predicative
+	depends: supports
+surrounding
+	lexem: surround
+	part: VERB
+	part: attribute
+	depends: text
+table
+	lexem: table
+	part: NOUN
+	part: object
+	depends: Use
+tables
+	lexem: table
+	part: NOUN
+	part: pobj
+	depends: for
+tabular
+	lexem: tabular
+	part: ADJ
+	part: conj
+	depends: Use
+take
+	lexem: take
+	part: VERB
+	part: conj
+	depends: hope
+taking
+	lexem: take
+	part: VERB
+	part: conj
+	depends: given
+template
+	lexem: template
+	part: NOUN
+	part: object
+	depends: using
+text
+	lexem: text
+	part: NOUN
+	part: object
+	depends: highlighting
+that
+	lexem: that
+	part: DET
+	part: det
+	depends: template
+the
+	lexem: the
+	part: DET
+	part: det
+	depends: form
+their
+	lexem: their
+	part: PRON
+	part: poss
+	depends: requirements
+then
+	lexem: then
+	part: ADV
+	part: advmod
+	depends: cite
+these
+	lexem: these
+	part: DET
+	part: det
+	depends: cases
+this
+	lexem: this
+	part: PRON
+	part: pobj
+	depends: like
+time
+	lexem: time
+	part: NOUN
+	part: pobj
+	depends: for
+to
+	lexem: to
+	part: PART
+	part: aux
+	depends: learn
+toggled
+	lexem: toggle
+	part: VERB
+	part: conj
+	depends: are
+tool
+	lexem: tool
+	part: NOUN
+	part: pobj
+	depends: with
+toolbar
+	lexem: toolbar
+	part: NOUN
+	part: pobj
+	depends: on
+top
+	lexem: top
+	part: ADJ
+	part: attribute
+	depends: left
+track
+	lexem: track
+	part: NOUN
+	part: object
+	depends: keep
+tree
+	lexem: tree
+	part: NOUN
+	part: pobj
+	depends: in
+tutorial
+	lexem: tutorial
+	part: NOUN
+	part: object
+	depends: find
+tutorials
+	lexem: tutorial
+	part: NOUN
+	part: pobj
+	depends: for
+updated
+	lexem: update
+	part: VERB
+	part: attribute
+	depends: preview
+upgraded
+	lexem: upgrade
+	part: VERB
+	part: attribute
+	depends: account
+upload
+	lexem: upload
+	part: NOUN
+	part: compound
+	depends: menu
+us
+	lexem: we
+	part: PRON
+	part: subject
+	depends: know
+use
+	lexem: use
+	part: VERB
+	part: conj
+	depends: have
+used
+	lexem: use
+	part: VERB
+	part: attribute
+	depends: commands
+useful
+	lexem: useful
+	part: ADJ
+	part: ccomp
+	depends: find
+user
+	lexem: user
+	part: NOUN
+	part: compound
+	depends: guides
+using
+	lexem: use
+	part: VERB
+	part: acl
+	depends: feedback
+various
+	lexem: various
+	part: ADJ
+	part: attribute
+	depends: settings
+very
+	lexem: very
+	part: ADV
+	part: advmod
+	depends: top
+via
+	lexem: via
+	part: ADP
+	part: prep
+	depends: import
+video
+	lexem: video
+	part: NOUN
+	part: compound
+	depends: tutorial
+view
+	lexem: view
+	part: VERB
+	part: advcl
+	depends: click
+visit
+	lexem: visit
+	part: VERB
+	part: predicative
+	depends: visit
+way
+	lexem: way
+	part: NOUN
+	part: subject
+	depends: is
+well
+	lexem: well
+	part: ADV
+	part: advmod
+	depends: as
+when
+	lexem: when
+	part: SCONJ
+	part: advmod
+	depends: done
+will
+	lexem: will
+	part: AUX
+	part: aux
+	depends: formatted
+window
+	lexem: window
+	part: NOUN
+	part: pobj
+	depends: of
+with
+	lexem: with
+	part: ADP
+	part: prep
+	depends: created
+within
+	lexem: within
+	part: ADP
+	part: prep
+	depends: languages
+would
+	lexem: would
+	part: AUX
+	part: aux
+	depends: like
+writing
+	lexem: write
+	part: VERB
+	part: xcomp
+	depends: start
+you
+	lexem: you
+	part: PRON
+	part: subject
+	depends: have
+your
+	lexem: your
+	part: PRON
+	part: poss
+	depends: Mendeley
+—
+	lexem: —
+	part: PUNCT
+	part: punct
+	depends: have
+’d
+	lexem: ’d
+	part: AUX
+	part: aux
+	depends: like
+’re
+	lexem: ’re
+	part: AUX
+	part: aux
+	depends: using
+’s
+	lexem: ’
+	part: VERB
+	part: predicative
+	depends: ’s
+’ve
+	lexem: ’ve
+	part: AUX
+	part: aux
+	depends: chosen
+“
+	lexem: "
+	part: PUNCT
+	part: punct
+	depends: clicking
+”
+	lexem: "
+	part: PUNCT
+	part: punct
+	depends: comment
+mylexem
+	lexem: for
+	part: ADP
+	part: prep
+	depends: formatted

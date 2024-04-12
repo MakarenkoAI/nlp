@@ -18,10 +18,21 @@
     </div>
     <div class="buttons">
         <div class="left-btn">
-            <input type="submit" value="Clear" name="cleardict" id="cleardict" class="btn"  title="Clear the dictionary">
-            <input type="submit" value="Save" name="savedict" id="savedict" class="btn"  title="Update the dictionary">
-            <input type="text"  placeholder="Search..." name="searchdict" id="searchdict" class="search"  title="Search by a substring&#013;Press . to see all file&#013;Press , to see empty window">
-            <input type="submit" value="Return" name="return" id="return" class="btn"  title="Pass to main-page">
+            <label class="btn">
+                <input type="submit" value="ClearDict" style="display:none" name="cleardict" id="cleardict"  title="Get the dictionary">
+                <span  title="Get the dictionary">Clear</span>
+            </label>
+            <label class="btn">
+                <input type="submit" value="SaveDict" style="display:none" name="savedict" id="savedict"  title="Update the dictionary">
+                <span  title="Update the dictionary">Save</span>
+            </label>
+           
+            <input type="text"  placeholder="Search..."  name="searchdict" id="searchdict" class="search"  title="Search by a substring&#013;Press . to see all file&#013;Press , to see empty window">
+            
+            <label class="btn">
+                <input type="submit" value="Return" style="display:none" name="return" id="return"  title="Pass to main-page">
+                <span  title="Pass to main-page">Return</span>
+            </label>
         </div>
     </div>
     </form>
@@ -48,7 +59,7 @@
       </script>
       <script>
         const textarea = document.getElementById("help");
-        const list = ["Алгоритм взаимодействия со славорём:", "1)В поле \"Search\" написать искомый элемент", "2)В главном окне выведутся все элементы поиска", "", "Кнопка \"Save\" сохраняет изменения, внесённые в словарь", "","Кнопка \"Clear\" полностью удаляет созданный словарь", "", "Кнопка \"Return\" возвращает на главный экран"];
+        const list = ["Алгоритм взаимодействия со словарём:", "1)В поле \"Search\" написать искомый элемент", "2)В главном окне выведутся все элементы поиска", "", "Кнопка \"Save\" сохраняет изменения, внесённые в словарь", "","Кнопка \"Clear\" полностью удаляет созданный словарь", "", "Кнопка \"Return\" возвращает на главный экран"];
         const listString = list.join("\n");
         textarea.value = listString;
       </script>

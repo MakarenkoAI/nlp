@@ -1,18 +1,21 @@
 import nltk
 import nltk.corpus  
+from nltk.stem import WordNetLemmatizer
 from nltk.text import Text  
 from pypdf import PdfReader
 from nltk.corpus import wordnet as wn
 from nltk.draw import *
 import re
 import spacy #another open-source library for NLP
-from spacy import displacy
+
+from collections import Counter
+import xml.etree.ElementTree as ET
+import pymorphy3
+import xml.sax.saxutils
 
 nlp = spacy.load('en_core_web_sm')
 nltk.download('universal_tagset')
-nltk.download('wordnet')
-nltk.download('vader_lexicon')
-nltk.download('averaged_perceptron_tagger')
+
 
 def percentage(word:str, text:Text): 
     return round(100*text.tokens.count(word)/len(text.tokens), 3)
@@ -98,13 +101,13 @@ def get_text(dictionary:dict)->str:
     for key, value in dictionary.items():
         text+=f"{key} : {value}\n"
     return text
-
+#:<12
 def get_text2(dictionary:dict)->str:
     text=""
     if len(dictionary) == 0 : return
     for key, value in dictionary.items():
-        value1, value2, value3 = value[0], value[1], value[2]
-        text+=f"{key:<12} : {value1:<12}{value2:<20}{value3:<12}\n"
+        value1, value2, value3, value4 = value[0], value[1], value[2], value[3]
+        text+=f"{key}\n\tlexem: {value1}\n\tpart: {value2}\n\tpart: {value3}\n\tdepends: {value4}\n"
     return text
 
 def algorithm2(text:str):
@@ -126,15 +129,19 @@ translation_dict = {"nsubj":"subject",
     "amod":"attribute"}
 
 def get_tags(sentences:str)->dict:
+    lemmatizer = WordNetLemmatizer()
     text_dict = {}
     for line in sentences:
         doc = nlp(line)
         for token in doc:
+            token_lemma = token.lemma_
             token_text = token.text
             token_pos = token.pos_
             token_dep = token.dep_
             if translation_dict.get(token.dep_) != None: token_dep = translation_dict[token.dep_]
             token_head = token.head.text
-            text_dict.update({token_text : [token_pos, token_dep, token_head]})
+            text_dict.update({token_text : [token_lemma, token_pos, token_dep, token_head]})
     return {key:text_dict[key] for key in sorted(text_dict)}
-  
+   
+  #######################
+
