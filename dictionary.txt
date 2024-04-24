@@ -1,1575 +1,872 @@
+
+Your => poss
+introduction => nsubj
+goes => ROOT
+here => advmod
 !
-	lexem: !
-	part: PUNCT
-	part: punct
-	depends: hope
-,
-	lexem: ,
-	part: PUNCT
-	part: punct
-	depends: hope
--
-	lexem: -
-	part: PUNCT
-	part: punct
-	depends: tree
+=> punct
+Simply => advmod
+start => ROOT
+writing => xcomp
+your => poss
+document => dobj
+and => cc
+use => conj
+the => det
+Recompile => compound
+button => dobj => dep
+to => aux
+view => xcomp
+the => det
+updated => amod
+PDF => compound
+preview => dobj
 .
-	lexem: .
-	part: PUNCT
-	part: punct
-	depends: let
-.bib
-	lexem: .bib
-	part: NOUN
-	part: pobj
-	depends: of
-1
-	lexem: 1
-	part: NUM
-	part: predicative
-	depends: 1
+=> punct
+Examples => nsubjpass
+of => prep
+commonly => advmod
+used => amod
+commands => pobj
+and => cc
+features => conj
+are => auxpass
+listed => ROOT => dep
+below => advmod
+, => punct
+to => aux
+help => advcl
+you => nsubjpass
+get => auxpass
+started => ccomp
+.
+=> punct
+Once => mark
+you => nsubj
+’re => advcl
+familiar => acomp
+with => prep
+the => det
+editor => pobj
+, => punct
+you => nsubj
+can => aux
+find => ROOT
+various => amod
+project => compound
+settings => dobj
+in => prep
+the => det
+Overleaf => compound
+menu => pobj
+, => punct => dep
+accessed => advcl
+via => prep
+the => det
+button => pobj
+in => prep
+the => det
+very => advmod
+top => amod
+left => pobj
+of => prep
+the => det
+editor => pobj
+.
+=> punct
+To => aux
+view => advcl
+tutorials => dobj
+, => punct
+user => compound
+guides => conj
+, => punct
+and => cc
+further => amod => dep
+documentation => conj
+, => punct
+please => intj
+visit => ROOT
+our => poss
+help => compound
+library => dobj
+, => punct
+or => cc
+head => conj
+to => prep
+our => poss
+plans => compound
+page => pobj
+to => aux
+choose => advcl
+your => poss
+plan => dobj
+.
+=> punct
+Simply => advmod
+use => ROOT
+the => det
+section => dobj
+and => cc
+subsection => compound
+commands => conj
+, => punct
+as => prep
+in => prep
+this => det
+example => compound
+document => pobj
+!
+=> punct
+With => prep
+Overleaf => pobj
+, => punct
+all => det => dep
+the => det
+formatting => nsubjpass
+and => cc
+numbering => conj
+is => auxpass
+handled => ROOT
+automatically => advmod
+according => prep
+to => prep
+the => det
+template => pobj
+you => nsubj
+’ve => aux
+chosen => relcl
+.
+=> punct
+If => mark => dep
+you => nsubj
+’re => aux
+using => advcl
+the => det
+Visual => compound
+Editor => dobj
+, => punct
+you => nsubj
+can => aux
+also => advmod
+create => ROOT
+new => amod
+section => dobj
+and => cc
+subsections => conj
+via => prep
+the => det
+buttons => pobj
+in => prep
+the => det => dep
+editor => compound
+toolbar => pobj
+.
+=> punct
+First => advmod
+you => nsubj
+have => ROOT
+to => aux
+upload => xcomp
+the => det
+image => compound
+file => dobj
+from => prep
+your => poss
+computer => pobj
+using => advcl
+the => det
+upload => compound
+link => dobj
+in => prep
+the => det
+file- => amod => dep
+tree => compound
+menu => pobj
+.
+=> punct
+Then => advmod
+use => ROOT
+the => det
+includegraphics => compound
+command => dobj
+to => aux
+include => xcomp
+it => dobj
+in => prep
+your => poss
+document => pobj
+.
+=> punct
+Use => ROOT
+the => det
+figure => compound => dep
+environment => dobj
+and => cc
+the => det
+caption => compound
+command => conj
+to => aux
+add => acl
+a => det
+number => dobj
+and => cc
+a => det
+caption => conj
+to => prep
+your => poss
+figure => pobj
+.
+=> punct
+See => ROOT
+the => det
+code => dobj => dep
+for => prep
+Figure => pobj
 ?
-	lexem: ?
-	part: PUNCT
-	part: punct
-	depends: in
-Add
-	lexem: add
-	part: ADJ
-	part: attribute
-	depends: comment
-BibTeX
-	lexem: bibtex
-	part: NUM
-	part: nummod
-	depends: entries
+=> punct
+?
+=> punct
+in => ROOT
+this => det
+section => pobj
+for => prep
+an => det
+example => pobj
+.
+=> punct
+Note => ROOT
+that => mark
+your => poss
+figure => nsubjpass
+will => aux
+automatically => advmod
+be => auxpass
+placed => ccomp
+in => prep
+the => det
+most => advmod
+appropriate => amod
+place => pobj
+for => prep
+it => pobj
+, => punct
+given => prep
+the => det => dep
+surrounding => amod
+text => pobj
+and => cc
+taking => conj
+into => prep
+account => pobj
+other => amod
+figures => dobj
+or => cc
+tables => conj
+that => nsubj
+may => aux
+be => relcl
+close => acomp
+by => prep
+.
+=> punct
+You => nsubj
+can => aux
+find => ROOT => dep
+out => prt
+more => advmod
+about => prep
+adding => pcomp
+images => dobj
+to => prep
+your => poss
+documents => pobj
+in => prep
+this => det
+help => compound
+article => pobj
+on => prep
+including => pcomp
+images => pobj
+on => prep
+Overleaf => pobj
+.
+=> punct
+Use => ROOT
+the => det
+table => dobj
+and => cc
+tabular => conj
+environments => dobj
+for => prep
+basic => amod
+tables => pobj
+— => punct
+see => conj
+Table => dobj
+, => punct
+for => prep
+example => pobj
+.
+=> punct
+For => prep
+more => amod => dep
+information => pobj
+, => punct
+please => intj
+see => ROOT
+this => nsubj
+help => compound
+article => dobj
+.
+=> punct
+Comments => nsubjpass
+can => aux
+be => auxpass
+added => ROOT
+to => prep
+your => poss
+project => pobj
+by => prep
+highlighting => pcomp
+some => det
+text => dobj
+and => cc
+clicking => conj
+“ => punct
+Add => amod
+comment => dobj
+” => punct
+in => prep => dep
+the => det
+top => amod
+right => pobj
+of => prep
+the => det
+editor => compound
+pane => pobj
+.
+=> punct
+To => aux
+view => advcl
+existing => amod
+comments => dobj
+, => punct
+click => ROOT
+on => prep
+the => det
+Review => compound
+menu => pobj
+in => prep
+the => det
+toolbar => pobj => dep
+above => advmod
+.
+=> punct
+To => aux
+reply => advcl
+to => prep
+a => det
+comment => pobj
+, => punct
+click => ROOT
+on => prep
+the => det
+Reply => compound
+button => pobj
+in => prep
+the => det
+lower => amod
+right => amod
+corner => pobj
+of => prep
+the => det
+comment => pobj
+.
+=> punct
+You => nsubj
+can => aux
+close => ROOT
+the => det
+Review => compound
+pane => dobj
+by => prep
+clicking => pcomp
+its => poss
+name => dobj
+on => prep
+the => det
+toolbar => pobj
+when => advmod
+you => nsubjpass
+’re => auxpass
+done => advcl
+reviewing => xcomp
+for => prep
+the => det => dep
+time => nsubj
+being => pcomp
+.
+=> punct
+Track => compound
+changes => nsubj
+are => ROOT
+available => acomp
+on => prep
+all => predet
+our => poss
+premium => compound
+plans => pobj
+, => punct
+and => cc
+can => aux
+be => auxpass
+toggled => conj
+on => prep
+or => cc
+off => conj
+using => advcl
+the => det
+option => dobj => dep
+at => prep
+the => det
+top => pobj
+of => prep
+the => det
+Review => compound
+pane => pobj
+.
+=> punct
+Track => compound
+changes => nsubj
+allow => ROOT
+you => nsubj
+to => aux
+keep => ccomp
+track => dobj
+of => prep
+every => det
+change => pobj
+made => acl
+to => prep
+the => det => dep
+document => pobj
+, => punct
+along => prep
+with => prep
+the => det
+person => nsubj
+making => pcomp
+the => det
+change => dobj
+.
+=> punct
+You => nsubj
+can => aux
+make => ROOT
+lists => dobj
+with => prep
+automatic => amod
+numbering => pobj
+.
+=> punct
+.
+=> ROOT
+.
+=> ROOT
+Usually => advmod
+the => det
+template => nsubj
+you => nsubj
+’re => aux
+using => relcl
+will => aux
+have => ROOT
+the => det
+page => compound
+margins => dobj
+and => cc
+paper => compound
+size => conj
+set => acl
+correctly => advmod
+for => prep
+that => det => dep
+use => compound
+- => punct
+case => pobj
+.
+=> punct
+For => prep
+example => pobj
+, => punct
+if => mark
+you => nsubj
+’re => aux
+using => advcl
+a => det
+journal => compound
+article => compound
+template => dobj
+provided => acl
+by => agent
+the => det
+journal => compound
+publisher => pobj
+, => punct => dep
+that => det
+template => nsubjpass
+will => aux
+be => auxpass
+formatted => ROOT
+according => prep
+to => prep
+their => poss
+requirements => pobj
+.
+=> punct
+In => prep
+these => det
+cases => pobj
+, => punct
+it => nsubj
+’s => ROOT
+best => acomp
+not => neg
+to => aux
+alter => xcomp => dep
+the => det
+margins => dobj
+directly => advmod
+.
+=> punct
+If => mark
+however => advmod
+you => nsubj
+’re => aux
+using => advcl
+a => det
+more => advmod
+general => amod
+template => dobj
+, => punct
+such => amod
+as => prep
+this => det
+one => pobj
+, => punct
+and => cc
+would => aux
+like => conj
+to => aux
+alter => xcomp
+the => det => dep
+margins => dobj
+, => punct
+a => det
+common => amod
+way => nsubj
+to => aux
+do => relcl
+so => advmod
+is => ROOT
+via => prep
+the => det
+geometry => compound
+package => pobj
+.
+=> punct
+You => nsubj
+can => aux
+find => ROOT
+the => det
+geometry => compound
+package => nsubj => dep
+loaded => ccomp
+in => prep
+the => det
+preamble => pobj
+at => prep
+the => det
+top => pobj
+of => prep
+this => det
+example => compound
+file => pobj
+, => punct
+and => cc
+if => mark
+you => nsubj
+’d => aux
+like => advcl
+to => aux
+learn => xcomp
+more => dobj
+about => prep
+how => advmod
+to => aux => dep
+adjust => pcomp
+the => det
+settings => dobj
+, => punct
+please => intj
+visit => conj
+this => det
+help => compound
+article => dobj
+on => prep
+page => compound
+size => pobj
+and => cc
+margins => conj
+.
+=> punct
+Overleaf => nsubj
+supports => ROOT
+many => amod
+different => amod
+languages => dobj
+, => punct
+including => prep
+multiple => amod
+different => amod
+languages => pobj
+within => prep
+one => nummod
+doc- => amod => dep
+ument => pobj
+.
+=> punct
+To => aux
+configure => advcl
+the => det
+document => compound
+language => dobj
+, => punct
+simply => advmod
+edit => ROOT
+the => det
+option => dobj
+provided => acl
+to => dative
+the => det
+babel => compound
+package => pobj
+in => prep
+the => det => dep
+preamble => pobj
+at => prep
+the => det
+top => pobj
+of => prep
+this => det
+example => compound
+project => pobj
+.
+=> punct
+To => aux
+learn => advcl
+more => dobj
+about => prep
+the => det
+different => amod
+options => pobj
+, => punct
+please => intj
+visit => ROOT => dep
+this => det
+help => compound
+article => dobj
+on => prep
+international => amod
+language => compound
+support => pobj
+.
+=> punct
+To => aux
+change => advcl
+the => det
+spell => compound
+check => compound
+language => dobj
+, => punct
+simply => advmod
+open => ROOT
+the => det
+Overleaf => compound
+menu => dobj
+at => prep
+the => det
+top => amod
+left => pobj
+of => prep
+the => det
+editor => compound => dep
+window => pobj
+, => punct
+scroll => conj
+down => prt
+to => prep
+the => det
+spell => compound
+check => compound
+setting => pobj
+, => punct
+and => cc
+adjust => conj
+accordingly => advmod
+.
+=> punct
+You => nsubj
+can => aux
+simply => advmod
+upload => ROOT
+a => det
+.bib => compound
+file => dobj
+containing => acl
+your => poss
+BibTeX => nummod
+entries => dobj
+, => punct
+created => acl
+with => prep
+a => det
+tool => pobj
+such => amod
+as => prep => dep
+JabRef => pobj
+.
+=> punct
+You => nsubj
+can => aux
+then => advmod
+cite => ROOT
+entries => dobj
+from => prep
+it => pobj
+, => punct
+like => prep
+this => pobj
+.
+=> punct
+Just => advmod
+remember => ROOT
+to => aux
+specify => xcomp
+a => det
+bibliography => compound
+style => dobj
+, => punct
+as => advmod => dep
+well => advmod
+as => prep
+the => det
+filename => pobj
+of => prep
+the => det
+.bib => pobj
+.
+=> punct
+You => nsubj
+can => aux
+find => ROOT
+a => det
+video => compound
+tutorial => dobj
+here => advmod
+to => aux
+learn => advcl
+more => dobj
+about => prep
 BibTeX.
-	lexem: bibtex.
-	part: ADV
-	part: pobj
-	depends: about
-Comments
-	lexem: comment
-	part: NOUN
-	part: nsubjpass
-	depends: added
-Contact
-	lexem: Contact
-	part: PROPN
-	part: compound
-	depends: Us
-Editor
-	lexem: Editor
-	part: PROPN
-	part: object
-	depends: using
-Examples
-	lexem: example
-	part: NOUN
-	part: nsubjpass
-	depends: listed
-Figure
-	lexem: Figure
-	part: PROPN
-	part: pobj
-	depends: for
-First
-	lexem: first
-	part: ADV
-	part: advmod
-	depends: have
-For
-	lexem: for
-	part: ADP
-	part: prep
-	depends: formatted
-If
-	lexem: if
-	part: SCONJ
-	part: mark
-	depends: have
-In
-	lexem: in
-	part: ADP
-	part: prep
-	depends: ’s
-JabRef
-	lexem: JabRef
-	part: PROPN
-	part: pobj
-	depends: as
-Just
-	lexem: just
-	part: ADV
-	part: advmod
-	depends: remember
-Mendeley
-	lexem: Mendeley
-	part: PROPN
-	part: nmod
-	depends: library
-Note
-	lexem: note
-	part: VERB
-	part: predicative
-	depends: Note
-Once
-	lexem: once
-	part: SCONJ
-	part: mark
-	depends: ’re
-Overleaf
-	lexem: Overleaf
-	part: PROPN
-	part: compound
-	depends: menu
-PDF
-	lexem: PDF
-	part: PROPN
-	part: compound
-	depends: preview
-Please
-	lexem: please
-	part: INTJ
-	part: intj
-	depends: let
-Recompile
-	lexem: Recompile
-	part: PROPN
-	part: compound
-	depends: button
-Reply
-	lexem: Reply
-	part: PROPN
-	part: compound
-	depends: button
-Review
-	lexem: Review
-	part: PROPN
-	part: compound
-	depends: pane
-See
-	lexem: see
-	part: VERB
-	part: predicative
-	depends: See
-Simply
-	lexem: simply
-	part: ADV
-	part: advmod
-	depends: use
-Table
-	lexem: Table
-	part: PROPN
-	part: object
-	depends: see
-Then
-	lexem: then
-	part: ADV
-	part: advmod
-	depends: use
-To
-	lexem: to
-	part: PART
-	part: aux
-	depends: change
-Track
-	lexem: track
-	part: NOUN
-	part: compound
-	depends: changes
-Us
-	lexem: Us
-	part: PROPN
-	part: compound
-	depends: link
-Use
-	lexem: use
-	part: VERB
-	part: predicative
-	depends: Use
-Usually
-	lexem: usually
-	part: ADV
-	part: advmod
-	depends: have
-Visual
-	lexem: Visual
-	part: PROPN
-	part: compound
-	depends: Editor
-We
-	lexem: we
-	part: PRON
-	part: subject
-	depends: hope
-With
-	lexem: with
-	part: ADP
-	part: prep
-	depends: handled
-You
-	lexem: you
-	part: PRON
-	part: subject
-	depends: find
-Your
-	lexem: your
-	part: PRON
-	part: poss
-	depends: introduction
-Zotero
-	lexem: Zotero
-	part: PROPN
-	part: conj
-	depends: Mendeley
-a
-	lexem: a
-	part: DET
-	part: det
-	depends: look
-a.bib
-	lexem: a.bib
-	part: NUM
-	part: nummod
-	depends: file
-about
-	lexem: about
-	part: ADP
-	part: prep
-	depends: learn
-above
-	lexem: above
-	part: ADV
-	part: advmod
-	depends: toolbar
-accessed
-	lexem: access
-	part: VERB
-	part: advcl
-	depends: find
-according
-	lexem: accord
-	part: VERB
-	part: prep
-	depends: formatted
-accordingly
-	lexem: accordingly
-	part: ADV
-	part: advmod
-	depends: adjust
-account
-	lexem: account
-	part: NOUN
-	part: object
-	depends: have
-add
-	lexem: add
-	part: VERB
-	part: acl
-	depends: command
-added
-	lexem: add
-	part: VERB
-	part: predicative
-	depends: added
-adding
-	lexem: add
-	part: VERB
-	part: pcomp
-	depends: about
-adjust
-	lexem: adjust
-	part: VERB
-	part: conj
-	depends: scroll
-all
-	lexem: all
-	part: DET
-	part: predet
-	depends: plans
-allow
-	lexem: allow
-	part: VERB
-	part: predicative
-	depends: allow
-along
-	lexem: along
-	part: ADP
-	part: prep
-	depends: keep
-also
-	lexem: also
-	part: ADV
-	part: advmod
-	depends: let
-alter
-	lexem: alter
-	part: VERB
-	part: xcomp
-	depends: like
-an
-	lexem: an
-	part: DET
-	part: det
-	depends: account
-and
-	lexem: and
-	part: CCONJ
-	part: cc
-	depends: tutorials
-any
-	lexem: any
-	part: DET
-	part: det
-	depends: feedback
-appropriate
-	lexem: appropriate
-	part: ADJ
-	part: attribute
-	depends: place
-are
-	lexem: be
-	part: AUX
-	part: predicative
-	depends: are
-article
-	lexem: article
-	part: NOUN
-	part: object
-	depends: visit
-as
-	lexem: as
-	part: ADP
-	part: prep
-	depends: import
-at
-	lexem: at
-	part: ADP
-	part: prep
-	depends: use
-automatic
-	lexem: automatic
-	part: ADJ
-	part: attribute
-	depends: numbering
-automatically
-	lexem: automatically
-	part: ADV
-	part: advmod
-	depends: placed
-available
-	lexem: available
-	part: ADJ
-	part: acomp
-	depends: are
-babel
-	lexem: babel
-	part: NOUN
-	part: compound
-	depends: package
-basic
-	lexem: basic
-	part: ADJ
-	part: attribute
-	depends: tables
-be
-	lexem: be
-	part: AUX
-	part: auxpass
-	depends: formatted
-being
-	lexem: be
-	part: AUX
-	part: pcomp
-	depends: for
-below
-	lexem: below
-	part: ADV
-	part: advmod
-	depends: listed
-best
-	lexem: good
-	part: ADJ
-	part: acomp
-	depends: ’s
-bibliography
-	lexem: bibliography
-	part: NOUN
-	part: compound
-	depends: style
-bottom
-	lexem: bottom
-	part: NOUN
-	part: pobj
-	depends: at
-button
-	lexem: button
-	part: NOUN
-	part: pobj
-	depends: on
-buttons
-	lexem: button
-	part: NOUN
-	part: pobj
-	depends: via
-by
-	lexem: by
-	part: ADP
-	part: agent
-	depends: provided
-can
-	lexem: can
-	part: AUX
-	part: aux
-	depends: import
-caption
-	lexem: caption
-	part: NOUN
-	part: conj
-	depends: number
-case
-	lexem: case
-	part: NOUN
-	part: pobj
-	depends: for
-cases
-	lexem: case
-	part: NOUN
-	part: pobj
-	depends: In
-change
-	lexem: change
-	part: VERB
-	part: advcl
-	depends: open
-changes
-	lexem: change
-	part: NOUN
-	part: subject
-	depends: allow
-check
-	lexem: check
-	part: NOUN
-	part: compound
-	depends: setting
-choose
-	lexem: choose
-	part: VERB
-	part: advcl
-	depends: head
-chosen
-	lexem: choose
-	part: VERB
-	part: relcl
-	depends: template
-cite
-	lexem: cite
-	part: VERB
-	part: predicative
-	depends: cite
-click
-	lexem: click
-	part: VERB
-	part: predicative
-	depends: click
-clicking
-	lexem: click
-	part: VERB
-	part: pcomp
-	depends: by
-close
-	lexem: close
-	part: VERB
-	part: predicative
-	depends: close
-code
-	lexem: code
-	part: NOUN
-	part: object
-	depends: See
-command
-	lexem: command
-	part: NOUN
-	part: conj
-	depends: environment
-commands
-	lexem: command
-	part: NOUN
-	part: conj
-	depends: section
-comment
-	lexem: comment
-	part: NOUN
-	part: pobj
-	depends: of
-comments
-	lexem: comment
-	part: NOUN
-	part: object
-	depends: view
-common
-	lexem: common
-	part: ADJ
-	part: attribute
-	depends: way
-commonly
-	lexem: commonly
-	part: ADV
-	part: advmod
-	depends: used
-computer
-	lexem: computer
-	part: NOUN
-	part: pobj
-	depends: from
-configure
-	lexem: configure
-	part: VERB
-	part: advcl
-	depends: edit
-contact
-	lexem: contact
-	part: NOUN
-	part: compound
-	depends: form
-containing
-	lexem: contain
-	part: VERB
-	part: acl
-	depends: file
-corner
-	lexem: corner
-	part: NOUN
-	part: pobj
-	depends: in
-correctly
-	lexem: correctly
-	part: ADV
-	part: advmod
-	depends: set
-create
-	lexem: create
-	part: VERB
-	part: predicative
-	depends: create
-created
-	lexem: create
-	part: VERB
-	part: acl
-	depends: entries
-different
-	lexem: different
-	part: ADJ
-	part: attribute
-	depends: options
-directly
-	lexem: directly
-	part: ADV
-	part: advmod
-	depends: as
-do
-	lexem: do
-	part: AUX
-	part: aux
-	depends: take
-document
-	lexem: document
-	part: NOUN
-	part: compound
-	depends: language
-documentation
-	lexem: documentation
-	part: NOUN
-	part: conj
-	depends: guides
-documents
-	lexem: document
-	part: NOUN
-	part: pobj
-	depends: to
-done
-	lexem: do
-	part: VERB
-	part: advcl
-	depends: clicking
-down
-	lexem: down
-	part: ADP
-	part: prt
-	depends: scroll
-edit
-	lexem: edit
-	part: VERB
-	part: predicative
-	depends: edit
-editor
-	lexem: editor
-	part: NOUN
-	part: compound
-	depends: window
-entries
-	lexem: entry
-	part: NOUN
-	part: object
-	depends: cite
-environment
-	lexem: environment
-	part: NOUN
-	part: object
-	depends: Use
-environments
-	lexem: environment
-	part: NOUN
-	part: object
-	depends: tabular
-every
-	lexem: every
-	part: DET
-	part: det
-	depends: change
-example
-	lexem: example
-	part: NOUN
-	part: compound
-	depends: project
-existing
-	lexem: existing
-	part: ADJ
-	part: attribute
-	depends: comments
-familiar
-	lexem: familiar
-	part: ADJ
-	part: acomp
-	depends: ’re
-features
-	lexem: feature
-	part: NOUN
-	part: conj
-	depends: commands
-feedback
-	lexem: feedback
-	part: NOUN
-	part: object
-	depends: have
-figure
-	lexem: figure
-	part: NOUN
-	part: nsubjpass
-	depends: placed
-figures
-	lexem: figure
-	part: NOUN
-	part: object
-	depends: taking
-file
-	lexem: file
-	part: NOUN
-	part: compound
-	depends: tree
-filename
-	lexem: filename
-	part: NOUN
-	part: object
-	depends: specify
-filetree
-	lexem: filetree
-	part: NOUN
-	part: compound
-	depends: menu
-find
-	lexem: find
-	part: VERB
-	part: ccomp
-	depends: hope
-for
-	lexem: for
-	part: ADP
-	part: prep
-	depends: library
-form
-	lexem: form
-	part: NOUN
-	part: object
-	depends: use
-formatted
-	lexem: format
-	part: VERB
-	part: predicative
-	depends: formatted
-formatting
-	lexem: formatting
-	part: NOUN
-	part: nsubjpass
-	depends: handled
-from
-	lexem: from
-	part: ADP
-	part: prep
-	depends: entries
-further
-	lexem: further
-	part: ADJ
-	part: attribute
-	depends: documentation
-general
-	lexem: general
-	part: ADJ
-	part: attribute
-	depends: template
-geometry
-	lexem: geometry
-	part: NOUN
-	part: compound
-	depends: package
-get
-	lexem: get
-	part: AUX
-	part: auxpass
-	depends: started
-given
-	lexem: give
-	part: VERB
-	part: prep
-	depends: Note
-goes
-	lexem: go
-	part: VERB
-	part: predicative
-	depends: goes
-guides
-	lexem: guide
-	part: NOUN
-	part: conj
-	depends: tutorials
-handled
-	lexem: handle
-	part: VERB
-	part: predicative
-	depends: handled
-have
-	lexem: have
-	part: VERB
-	part: ccomp
-	depends: know
-head
-	lexem: head
-	part: VERB
-	part: conj
-	depends: visit
-help
-	lexem: help
-	part: NOUN
-	part: compound
-	depends: library
-here
-	lexem: here
-	part: ADV
-	part: advmod
-	depends: tutorial
-highlighting
-	lexem: highlight
-	part: VERB
-	part: pcomp
-	depends: by
-hope
-	lexem: hope
-	part: VERB
-	part: predicative
-	depends: hope
-how
-	lexem: how
-	part: SCONJ
-	part: advmod
-	depends: adjust
-however
-	lexem: however
-	part: ADV
-	part: advmod
-	depends: using
-https://www.overleaf.com/contact
-	lexem: https://www.overleaf.com/contact
-	part: X
-	part: pobj
-	depends: at
-if
-	lexem: if
-	part: SCONJ
-	part: mark
-	depends: have
-image
-	lexem: image
-	part: NOUN
-	part: compound
-	depends: file
-images
-	lexem: image
-	part: NOUN
-	part: pobj
-	depends: including
-import
-	lexem: import
-	part: VERB
-	part: predicative
-	depends: import
-in
-	lexem: in
-	part: ADP
-	part: prep
-	depends: menu
-include
-	lexem: include
-	part: VERB
-	part: xcomp
-	depends: use
-includegraphics
-	lexem: includegraphic
-	part: NOUN
-	part: compound
-	depends: command
-including
-	lexem: include
-	part: VERB
-	part: prep
-	depends: languages
-information
-	lexem: information
-	part: NOUN
-	part: pobj
-	depends: For
-international
-	lexem: international
-	part: ADJ
-	part: attribute
-	depends: support
-into
-	lexem: into
-	part: ADP
-	part: prep
-	depends: taking
-introduction
-	lexem: introduction
-	part: NOUN
-	part: subject
-	depends: goes
-is
-	lexem: be
-	part: AUX
-	part: predicative
-	depends: is
-it
-	lexem: it
-	part: PRON
-	part: pobj
-	depends: from
-its
-	lexem: its
-	part: PRON
-	part: poss
-	depends: name
-journal
-	lexem: journal
-	part: NOUN
-	part: compound
-	depends: publisher
-keep
-	lexem: keep
-	part: VERB
-	part: ccomp
-	depends: allow
-know
-	lexem: know
-	part: VERB
-	part: ccomp
-	depends: let
-language
-	lexem: language
-	part: NOUN
-	part: object
-	depends: change
-languages
-	lexem: language
-	part: NOUN
-	part: pobj
-	depends: including
-learn
-	lexem: learn
-	part: VERB
-	part: advcl
-	depends: find
-left
-	lexem: left
-	part: NOUN
-	part: pobj
-	depends: at
-let
-	lexem: let
-	part: VERB
-	part: predicative
-	depends: let
-library
-	lexem: library
-	part: NOUN
-	part: pobj
-	depends: at
-like
-	lexem: like
-	part: ADP
-	part: prep
-	depends: cite
-link
-	lexem: link
-	part: NOUN
-	part: object
-	depends: using
-listed
-	lexem: list
-	part: VERB
-	part: predicative
-	depends: listed
-lists
-	lexem: list
-	part: NOUN
-	part: object
-	depends: make
-loaded
-	lexem: load
-	part: VERB
-	part: acl
-	depends: package
-look
-	lexem: look
-	part: NOUN
-	part: object
-	depends: take
-lower
-	lexem: low
-	part: ADJ
-	part: attribute
-	depends: corner
-made
-	lexem: make
-	part: VERB
-	part: acl
-	depends: change
-make
-	lexem: make
-	part: VERB
-	part: predicative
-	depends: make
-making
-	lexem: make
-	part: VERB
-	part: pcomp
-	depends: with
-many
-	lexem: many
-	part: ADJ
-	part: attribute
-	depends: languages
-margins
-	lexem: margin
-	part: NOUN
-	part: conj
-	depends: size
-may
-	lexem: may
-	part: AUX
-	part: aux
-	depends: be
-menu
-	lexem: menu
-	part: NOUN
-	part: pobj
-	depends: of
-more
-	lexem: more
-	part: ADJ
-	part: attribute
-	depends: tutorials
-most
-	lexem: most
-	part: ADV
-	part: advmod
-	depends: appropriate
-multiple
-	lexem: multiple
-	part: ADJ
-	part: attribute
-	depends: languages
-name
-	lexem: name
-	part: NOUN
-	part: object
-	depends: clicking
-new
-	lexem: new
-	part: ADJ
-	part: attribute
-	depends: section
-not
-	lexem: not
-	part: PART
-	part: neg
-	depends: alter
-number
-	lexem: number
-	part: NOUN
-	part: object
-	depends: add
-numbering
-	lexem: numbering
-	part: NOUN
-	part: pobj
-	depends: with
-of
-	lexem: of
-	part: ADP
-	part: prep
-	depends: bottom
-off
-	lexem: off
-	part: ADV
-	part: conj
-	depends: on
-on
-	lexem: on
-	part: ADP
-	part: prep
-	depends: visit
-one
-	lexem: one
-	part: NUM
-	part: nummod
-	depends: document
-open
-	lexem: open
-	part: VERB
-	part: predicative
-	depends: open
-option
-	lexem: option
-	part: NOUN
-	part: object
-	depends: edit
-options
-	lexem: option
-	part: NOUN
-	part: pobj
-	depends: about
-or
-	lexem: or
-	part: CCONJ
-	part: cc
-	depends: have
-other
-	lexem: other
-	part: ADJ
-	part: attribute
-	depends: figures
-our
-	lexem: our
-	part: PRON
-	part: poss
-	depends: library
-out
-	lexem: out
-	part: ADP
-	part: prt
-	depends: find
-package
-	lexem: package
-	part: NOUN
-	part: pobj
-	depends: to
-page
-	lexem: page
-	part: NOUN
-	part: compound
-	depends: size
-pane
-	lexem: pane
-	part: NOUN
-	part: pobj
-	depends: of
-paper
-	lexem: paper
-	part: NOUN
-	part: compound
-	depends: size
-person
-	lexem: person
-	part: NOUN
-	part: subject
-	depends: making
-place
-	lexem: place
-	part: NOUN
-	part: pobj
-	depends: in
-placed
-	lexem: place
-	part: VERB
-	part: ccomp
-	depends: Note
-plan
-	lexem: plan
-	part: NOUN
-	part: object
-	depends: choose
-plans
-	lexem: plan
-	part: NOUN
-	part: pobj
-	depends: on
-please
-	lexem: please
-	part: INTJ
-	part: intj
-	depends: visit
-preamble
-	lexem: preamble
-	part: NOUN
-	part: pobj
-	depends: in
-premium
-	lexem: premium
-	part: NOUN
-	part: compound
-	depends: plans
-preview
-	lexem: preview
-	part: NOUN
-	part: object
-	depends: view
-project
-	lexem: project
-	part: NOUN
-	part: pobj
-	depends: of
-provided
-	lexem: provide
-	part: VERB
-	part: acl
-	depends: option
-publisher
-	lexem: publisher
-	part: NOUN
-	part: pobj
-	depends: by
-remember
-	lexem: remember
-	part: VERB
-	part: predicative
-	depends: remember
-reply
-	lexem: reply
-	part: VERB
-	part: advcl
-	depends: click
-requirements
-	lexem: requirement
-	part: NOUN
-	part: pobj
-	depends: to
-reviewing
-	lexem: review
-	part: VERB
-	part: xcomp
-	depends: done
-right
-	lexem: right
-	part: ADJ
-	part: attribute
-	depends: corner
-scroll
-	lexem: scroll
-	part: VERB
-	part: conj
-	depends: open
-section
-	lexem: section
-	part: NOUN
-	part: pobj
-	depends: in
-see
-	lexem: see
-	part: VERB
-	part: predicative
-	depends: see
-set
-	lexem: set
-	part: VERB
-	part: acl
-	depends: margins
-setting
-	lexem: setting
-	part: NOUN
-	part: pobj
-	depends: to
-settings
-	lexem: setting
-	part: NOUN
-	part: object
-	depends: adjust
-simply
-	lexem: simply
-	part: ADV
-	part: advmod
-	depends: upload
-size
-	lexem: size
-	part: NOUN
-	part: pobj
-	depends: on
-so
-	lexem: so
-	part: ADV
-	part: advmod
-	depends: do
-some
-	lexem: some
-	part: DET
-	part: det
-	depends: text
-specify
-	lexem: specify
-	part: VERB
-	part: xcomp
-	depends: remember
-spell
-	lexem: spell
-	part: NOUN
-	part: compound
-	depends: setting
-start
-	lexem: start
-	part: VERB
-	part: predicative
-	depends: start
-started
-	lexem: start
-	part: VERB
-	part: ccomp
-	depends: help
-style
-	lexem: style
-	part: NOUN
-	part: object
-	depends: specify
-subsection
-	lexem: subsection
-	part: NOUN
-	part: compound
-	depends: commands
-subsections
-	lexem: subsection
-	part: NOUN
-	part: conj
-	depends: section
-such
-	lexem: such
-	part: ADJ
-	part: attribute
-	depends: as
-support
-	lexem: support
-	part: NOUN
-	part: pobj
-	depends: on
-supports
-	lexem: support
-	part: VERB
-	part: predicative
-	depends: supports
-surrounding
-	lexem: surround
-	part: VERB
-	part: attribute
-	depends: text
-table
-	lexem: table
-	part: NOUN
-	part: object
-	depends: Use
-tables
-	lexem: table
-	part: NOUN
-	part: pobj
-	depends: for
-tabular
-	lexem: tabular
-	part: ADJ
-	part: conj
-	depends: Use
-take
-	lexem: take
-	part: VERB
-	part: conj
-	depends: hope
-taking
-	lexem: take
-	part: VERB
-	part: conj
-	depends: given
-template
-	lexem: template
-	part: NOUN
-	part: object
-	depends: using
-text
-	lexem: text
-	part: NOUN
-	part: object
-	depends: highlighting
-that
-	lexem: that
-	part: DET
-	part: det
-	depends: template
-the
-	lexem: the
-	part: DET
-	part: det
-	depends: form
-their
-	lexem: their
-	part: PRON
-	part: poss
-	depends: requirements
-then
-	lexem: then
-	part: ADV
-	part: advmod
-	depends: cite
-these
-	lexem: these
-	part: DET
-	part: det
-	depends: cases
-this
-	lexem: this
-	part: PRON
-	part: pobj
-	depends: like
-time
-	lexem: time
-	part: NOUN
-	part: pobj
-	depends: for
-to
-	lexem: to
-	part: PART
-	part: aux
-	depends: learn
-toggled
-	lexem: toggle
-	part: VERB
-	part: conj
-	depends: are
-tool
-	lexem: tool
-	part: NOUN
-	part: pobj
-	depends: with
-toolbar
-	lexem: toolbar
-	part: NOUN
-	part: pobj
-	depends: on
-top
-	lexem: top
-	part: ADJ
-	part: attribute
-	depends: left
-track
-	lexem: track
-	part: NOUN
-	part: object
-	depends: keep
-tree
-	lexem: tree
-	part: NOUN
-	part: pobj
-	depends: in
-tutorial
-	lexem: tutorial
-	part: NOUN
-	part: object
-	depends: find
-tutorials
-	lexem: tutorial
-	part: NOUN
-	part: pobj
-	depends: for
-updated
-	lexem: update
-	part: VERB
-	part: attribute
-	depends: preview
-upgraded
-	lexem: upgrade
-	part: VERB
-	part: attribute
-	depends: account
-upload
-	lexem: upload
-	part: NOUN
-	part: compound
-	depends: menu
-us
-	lexem: we
-	part: PRON
-	part: subject
-	depends: know
-use
-	lexem: use
-	part: VERB
-	part: conj
-	depends: have
-used
-	lexem: use
-	part: VERB
-	part: attribute
-	depends: commands
-useful
-	lexem: useful
-	part: ADJ
-	part: ccomp
-	depends: find
-user
-	lexem: user
-	part: NOUN
-	part: compound
-	depends: guides
-using
-	lexem: use
-	part: VERB
-	part: acl
-	depends: feedback
-various
-	lexem: various
-	part: ADJ
-	part: attribute
-	depends: settings
-very
-	lexem: very
-	part: ADV
-	part: advmod
-	depends: top
-via
-	lexem: via
-	part: ADP
-	part: prep
-	depends: import
-video
-	lexem: video
-	part: NOUN
-	part: compound
-	depends: tutorial
-view
-	lexem: view
-	part: VERB
-	part: advcl
-	depends: click
-visit
-	lexem: visit
-	part: VERB
-	part: predicative
-	depends: visit
-way
-	lexem: way
-	part: NOUN
-	part: subject
-	depends: is
-well
-	lexem: well
-	part: ADV
-	part: advmod
-	depends: as
-when
-	lexem: when
-	part: SCONJ
-	part: advmod
-	depends: done
-will
-	lexem: will
-	part: AUX
-	part: aux
-	depends: formatted
-window
-	lexem: window
-	part: NOUN
-	part: pobj
-	depends: of
-with
-	lexem: with
-	part: ADP
-	part: prep
-	depends: created
-within
-	lexem: within
-	part: ADP
-	part: prep
-	depends: languages
-would
-	lexem: would
-	part: AUX
-	part: aux
-	depends: like
-writing
-	lexem: write
-	part: VERB
-	part: xcomp
-	depends: start
-you
-	lexem: you
-	part: PRON
-	part: subject
-	depends: have
-your
-	lexem: your
-	part: PRON
-	part: poss
-	depends: Mendeley
-—
-	lexem: —
-	part: PUNCT
-	part: punct
-	depends: have
-’d
-	lexem: ’d
-	part: AUX
-	part: aux
-	depends: like
-’re
-	lexem: ’re
-	part: AUX
-	part: aux
-	depends: using
-’s
-	lexem: ’
-	part: VERB
-	part: predicative
-	depends: ’s
-’ve
-	lexem: ’ve
-	part: AUX
-	part: aux
-	depends: chosen
-“
-	lexem: "
-	part: PUNCT
-	part: punct
-	depends: clicking
-”
-	lexem: "
-	part: PUNCT
-	part: punct
-	depends: comment
-mylexem
-	lexem: for
-	part: ADP
-	part: prep
-	depends: formatted
+=> pobj
+If => mark
+you => nsubj
+have => advcl
+an => det
+upgraded => amod
+account => dobj
+, => punct
+you => nsubj
+can => aux
+also => advmod
+import => ROOT
+your => poss
+Mendeley => nmod
+or => cc
+Zotero => conj
+library => dobj
+directly => advmod
+as => prep => dep
+a.bib => amod
+file => pobj
+, => punct
+via => prep
+the => det
+upload => compound
+menu => pobj
+in => prep
+the => det
+file => compound
+- => punct
+tree => pobj
+.
+=> punct
+We => nsubj
+hope => ROOT
+you => nsubj
+find => ccomp
+Overleaf => nsubj
+useful => ccomp
+, => punct
+and => cc
+do => aux
+take => conj
+a => det
+look => dobj
+at => prep
+our => poss
+help => compound
+library => pobj
+for => prep
+more => amod
+tutorials => pobj
+and => cc => dep
+user => compound
+guides => conj
+!
+=> punct
+Please => intj
+also => advmod
+let => ROOT
+us => nsubj
+know => ccomp
+if => mark
+you => nsubj
+have => ccomp
+any => det
+feedback => dobj
+using => acl
+the => det
+Contact => compound
+Us => compound
+link => dobj
+at => prep
+the => det
+bottom => pobj => dep
+of => prep
+the => det
+Overleaf => compound
+menu => pobj
+— => punct
+or => cc
+use => conj
+the => det
+contact => compound
+form => dobj
+at => prep
+https://www.overleaf.com/contact => pobj
+.
+=> punct
+1 => ROOT

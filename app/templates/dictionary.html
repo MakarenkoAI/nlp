@@ -11,28 +11,30 @@
     <title>language</title>
 </head>
 <body>
-   <form method="POST" action="/" enctype="multipart/form-data">
+   <form method='POST' action="dictionary" enctype="multipart/form-data">
     {% csrf_token %}
     <div class="fields">
         <textarea class="textblack" id="dict_text" name="dict_text">{%if text %}{{text}}{%endif%}</textarea>
     </div>
     <div class="buttons">
+       
         <div class="left-btn">
-            <label class="btn">
-                <input type="submit" value="ClearDict" style="display:none" name="cleardict" id="cleardict"  title="Get the dictionary">
-                <span  title="Get the dictionary">Clear</span>
+            <label>
+                <input type="text"  placeholder="Search..."  name="searchdict" class="search"  title="Search by a substring&#013;Press . to see all file&#013;Press , to see empty window">
             </label>
             <label class="btn">
                 <input type="submit" value="SaveDict" style="display:none" name="savedict" id="savedict"  title="Update the dictionary">
                 <span  title="Update the dictionary">Save</span>
             </label>
-           
-            <input type="text"  placeholder="Search..."  name="searchdict" id="searchdict" class="search"  title="Search by a substring&#013;Press . to see all file&#013;Press , to see empty window">
-            
+            <label class="btn">
+                <input type="submit" value="ClearDict" style="display:none" name="cleardict" id="cleardict"  title="Get the dictionary">
+                <span  title="Get the dictionary">Clear</span>
+            </label>
             <label class="btn">
                 <input type="submit" value="Return" style="display:none" name="return" id="return"  title="Pass to main-page">
                 <span  title="Pass to main-page">Return</span>
             </label>
+           
         </div>
     </div>
     </form>

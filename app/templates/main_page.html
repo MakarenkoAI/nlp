@@ -3,16 +3,19 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="static/css/main_page.css">
+    <link rel="stylesheet" href="static/css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
     <title>language</title>
-    
+
 </head>
 <body>
-   <form method="POST" action="/" enctype="multipart/form-data">
+
+   <form method='POST' enctype="multipart/form-data">
     {% csrf_token %}
     <div class="fields">
         <textarea rows="10" cols="50" class="textblack" id="input_text" name="input_text" placeholder="Write some words...">{%if input%}{{input}}{%endif%}</textarea>
@@ -25,12 +28,12 @@
             <span type="submit"  title="Choose a file">Import</span>
         </label>
         <label class="btn">
-            <input type="submit" value="Translate" style="display:none" name="translate" id="translate"  title="Get a dictionary">
-            <span  title="Get a dictionary">Translate</span>
-        </label>
-        <label class="btn">
             <input type="submit" value="Clear" style="display:none" name="clear" id="clear" title="Clear all windows">
             <span title="Clear all windows">Clear</span>
+        </label>
+        <label class="btn">
+            <input type="submit" value="Translate" style="display:none" name="translate" id="translate"  title="Get a dictionary">
+            <span  title="Get a dictionary">Translate</span>
         </label>
         <label class="btn">
             <input type="submit" value="Open" style="display:none" name="open" id="open"  title="Show file in the window">
@@ -57,10 +60,9 @@
 
         <div id="popup">
             <div class="popup-content">
-        
             <textarea id="help" readonly></textarea> 
             </div>
-          </div>
+        </div>
           <button id="toggle-popup">?</button>
           <script>
             document.addEventListener('DOMContentLoaded', function() {
@@ -78,9 +80,25 @@
           </script>
           <script>
             const textarea = document.getElementById("help");
-            const list = ["Алгоритм получения словаря:", "1)Нажать кнопку \"Import\"", "2)Нажать кнопку \"Open\"", "3)Нажать кнопку \"Translate\"", "4)Нажать кнопку \"Save\"", "5)Нажать кнопку \"Dictionary\" чтобы перейти в созданный словарь", "", "Кнопка \"Clear\" полностью удаляет созданный словарь"];
+            const list = ["Алгоритм получения синтаксического дерева:", "1)Нажать кнопку \"Import\"", "2)Нажать кнопку \"Open\"", "3)Нажать кнопку \"Translate\"", "4)Нажать кнопку \"Save\"", "5)Нажать кнопку \"Dictionary\" чтобы перейти в созданный словарь", "", "Кнопка \"Clear\" очищает окна"];
             const listString = list.join("\n");
             textarea.value = listString;
           </script>
+         
+        </br></br></br>
+        <div class="wrapper">
+        <div class="scrolls">   
+            {%if image%}   
+
+            {%for el in image%}
+            <img src={{el}}/>
+            {%endfor%}
+
+            {% else %}
+            <img src="static\images\boy-holding-an-umbrella-svgrepo-com.svg" width="200"/>
+            {%endif%}
+        </div>
+        </div>
+         
 </body>
 </html>

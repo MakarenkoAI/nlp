@@ -1,5 +1,6 @@
 from django.shortcuts import render, redirect
 from app.tools import *
+from app.syntax_analysis import *
 from django.http import HttpResponse
 __INPUT = None
 __OUTPUT = None
@@ -7,49 +8,31 @@ __OUTPUT = None
 def homePageView(request):
     global __INPUT
     global __OUTPUT
-    if request.method == 'POST':
-        print(";",request.POST)
-        if request.POST.get("translate") != None and request.POST.get("input_text") != None:
-            __INPUT = request.POST.get("input_text")
-            __OUTPUT = algorithm2(__INPUT)
-            saveSentences(__INPUT)
-            return render(request, 'main_page.html', {'input': __INPUT, "output": __OUTPUT})  
+    
+    if request.POST.get("translate") and request.POST.get("input_text"):
+        __INPUT = request.POST.get("input_text")
+        lines = get_lines(__INPUT)
+        __OUTPUT, content = getImage(lines)
+        return render(request, 'main_page.html', {'input': __INPUT, "output": __OUTPUT, "image" : content})  
+    
+    if request.POST.get("clear"):
+        return render(request, 'main_page.html',  {'input': None, "output": None}) 
+    
+    if  request.POST.get("open"):
+        file = request.FILES.get("file")
+        print(file)
+        if file:
+            __INPUT = clear(getPDFContent(file))
+            return render(request, 'main_page.html', { 'input': __INPUT, "output": None }) 
         
-        if request.POST.get("clear") != None:
-            return render(request, 'main_page.html',  {'input': None, "output": None}) 
-        
-        if  request.POST.get("open") != None:
-            file = request.FILES.get("file")
-            if file:
-                __INPUT = getPDFContent(file)
-                return render(request, 'main_page.html', { 'input': __INPUT, "output": None }) 
-            
-        if request.POST.get("save") != None and request.POST.get("output_text") != None:
-            __INPUT = request.POST.get("input_text")
-            __OUTPUT = request.POST.get("output_text")
-            writeInFile(__OUTPUT)
-            return render(request, 'main_page.html', { 'input': __INPUT, "output": __OUTPUT}) 
-        
-        if request.POST.get("dictionary") != None:  
-            return redirect('dictionary')
-        
-        if request.POST.get("savedict") != None:
-            text = request.POST.get("dict_text")
-            text = writeInFile(text)
-            return render(request, 'dictionary.html', {'text': text})
-        
-        if request.POST.get("return") != None:
-            return render(request, 'main_page.html',  { 'input': __INPUT, "output": __OUTPUT})
-        
-        if request.POST.get("searchdict") != None:
-            substring = request.POST.get("searchdict")
-            if substring == ',': return render(request, 'dictionary.html', {'text': None})
-            lines = findLines(substring)
-            return render(request, 'dictionary.html', {'text': lines})
-        
-        if request.POST.get("cleardict") != None:
-            clearFile()
-            return render(request, 'dictionary.html')
+    if request.POST.get("save") and request.POST.get("output_text"):
+        __INPUT = request.POST.get("input_text")
+        __OUTPUT = request.POST.get("output_text")
+        writeInFile(__OUTPUT)
+        return render(request, 'main_page.html', { 'input': __INPUT, "output": __OUTPUT}) 
+    
+    if request.POST.get("dictionary"):  
+        return redirect('dictionary')
         
     return render(request, 'main_page.html')
     
@@ -57,7 +40,21 @@ def dictPageView(request):
     text = ''
     with open("dictionary.txt", 'r', encoding="utf-8") as file:
         text = file.read()
-    return render(request, 'dictionary.html', {'text': text})
+    if not len(request.POST): return render(request, 'dictionary.html', {'text': text})
+
+    if request.POST.get("searchdict") != '':
+        substring = request.POST.get("searchdict")
+        lines = findLines(substring)
+        return render(request, 'dictionary.html', {'text': lines})
+    if request.POST.get("savedict"):
+        text = request.POST.get("dict_text")
+        writeInFile(text)
+        return render(request, 'dictionary.html', {'text': text})
+    if request.POST.get("return") == 'Return':
+        return redirect('home')
+    if request.POST.get("cleardict"):
+        clearFile()
+        return render(request, 'dictionary.html')
 
 def saveSentences(text):
     with open("sentences.txt", "r", encoding="utf-8") as file:
@@ -73,10 +70,10 @@ def getSentences():
     with open("sentences.txt", "r", encoding="utf-8") as file:
         return file.read()
 
-def clear(word):
+def clear(word:str):
     word = word.replace("\r", "")
     word = word.replace("\t", "")
-    word = word.replace("\n", "")
+    word = word.replace("\n\n", "")
     return word
 
 def parseTxtFile()-> dict:
@@ -110,44 +107,31 @@ def get_xml_text_from_dict(dictionary:dict)->str:
     text += "</text>\n"
     return text
 
-def writeInFile(output:str)->str :
-    wordDictionary = parseTxtFile()
-    sents = output.split('\n')
-    sents = [clear(el) for el in sents]
-    if len(sents) > 4:
-        i = 0
-        while i < len(sents)-4:
-            wordDictionary.update({sents[i]:[sents[j] for j in range(i+1, i+5, 1)]})
-            i +=5
-    text = get_text_from_dict(wordDictionary)
-    with open("dictionary.txt", "w", encoding="utf-8") as fileW:
-        fileW.write(text)
-    textXml = get_xml_text_from_dict(wordDictionary)
-    with open("dictionary.xml", "w", encoding="utf-8") as fileW:
-        fileW.write(textXml)
-    return text
+def writeInFile(output:str) :
+    rez = ''
+    with open("dictionary.txt", "r", encoding="utf-8") as fileW:
+        text = fileW.read()
+        output = get_lines(output)
+        for el in output:
+            if el not in text:
+                rez += '\n' + el
+    with open("dictionary.txt", "w", encoding="utf-8") as file:
+        file.write(clear(rez))
+    return
 
 def clearFile():
     with open("dictionary.txt", "w", encoding="utf-8") as file:
        file.write("")
 
 def findLines(substring:str)-> str:
+    if not substring: return ''
     answer = []
-    wordDictionary = parseTxtFile()
     with open("dictionary.txt", "r", encoding="utf-8") as file:
         text = file.read()
         text = text.split('\n')
         if substring == '.': return '\n'.join(text)
         for line in text:
-            if substring == line:
-                answer.append("<--------------Word-------------->\n")
+            if substring in line:
+                answer.append("-----------Found-------------")
                 answer.append(line)
-        __SENTENCES = getSentences()
-        if substring in wordDictionary.keys() and __SENTENCES:
-            answer.append('\n'.join(wordDictionary[substring]))
-            answer.append("\n<--------------Concordance-------------->\n")
-            lines = list(set(get_lines(__SENTENCES)))
-            for line in lines:
-                if substring in line:
-                    answer.append(clear(line) + '\n')
     return '\n'.join(answer)

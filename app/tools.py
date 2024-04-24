@@ -8,10 +8,6 @@ from nltk.draw import *
 import re
 import spacy #another open-source library for NLP
 
-from collections import Counter
-import xml.etree.ElementTree as ET
-import pymorphy3
-import xml.sax.saxutils
 
 nlp = spacy.load('en_core_web_sm')
 nltk.download('universal_tagset')
@@ -30,9 +26,12 @@ def lexical_diversity(text:list):
     return round(len(text)/len(set(text)), 3)
 
 def getPDFContent(path:str)-> str:
-    print(path)
-    reader = PdfReader(path)
     text = ""
+    try:
+        reader = PdfReader(path)
+    except Exception as ex:
+        print(ex)
+        return text
     for page in reader.pages:
         text += page.extract_text() + "\n"
     return text

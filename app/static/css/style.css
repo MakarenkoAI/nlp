@@ -1,0 +1,68 @@
+.wrapper {
+  background: #fffcdf;
+  box-shadow: 1px 1px 10px #fff7ad;
+  margin: auto;
+  text-align: center;
+  position: relative;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  margin-bottom: 20px !important;
+  width: 800px;
+  padding-top: 5px;
+}
+
+.scrolls {
+
+  overflow-x: scroll;
+  overflow-y: scroll;
+  height: 250px;
+  white-space: nowrap;
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: rgb(255, 255, 255) rgb(254, 172, 232);
+}
+/* Works on Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+  width: 12px;
+}
+*::-webkit-scrollbar-track {
+  background: #fff7ad;
+}
+*::-webkit-scrollbar-thumb {
+  background-color: rgb(227, 159, 239);
+  border-radius: 20px;
+  border: 3px solid rgb(231, 167, 255);
+}
+
+.imageDiv img
+{
+
+  box-shadow: 1px 1px 10px #ca7676;
+  margin: 2px;
+  max-height: 150px;
+  cursor: pointer;
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+  vertical-align: top;
+}
+
+nav {
+  line-height: 20px;
+  color: #af1212;
+  padding: 12px 30px;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: .3s;
+}
+
+.wrapperlogo {
+  background: #fffffb;
+  text-align: center;
+  margin-top: 0px;
+  margin-bottom: 10px !important;
+  width: 100%;
+}
