@@ -132,6 +132,8 @@ def findLines(substring:str)-> str:
         if substring == '.': return '\n'.join(text)
         for line in text:
             if substring in line:
-                answer.append("-----------Found-------------")
+                answer.append("\n-----------Found-------------\n")
                 answer.append(line)
+        answer.append("\n-----------Meaning-------------\n")
+        answer.append(getMeaning(substring))
     return '\n'.join(answer)

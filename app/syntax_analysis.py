@@ -7,11 +7,22 @@ nlp=spacy.load('en_core_web_sm')
 
 
 nltk.download('averaged_perceptron_tagger')
-nltk.download('maxent_ne_chunkchunker')
+
 from nltk import pos_tag, RegexpParser
 from nltk.tokenize import word_tokenize
 
+from nltk.corpus import wordnet 
+
+
+def getMeaning(word:str)->str:
+    syns = wordnet.synsets(word) 
+    meaning = ''
+    for el in syns:
+        meaning += el.lemmas()[0].name() + ' <=> ' + el.definition() + '\n'
+    return meaning
+
 sentence = "The cat is sitting on the mat."
+
 def getTree(sent:str)->None:
     tokens = word_tokenize(sentence)
     pos_tags = pos_tag(tokens)
@@ -22,6 +33,12 @@ def getTree(sent:str)->None:
     parser = RegexpParser(grammar)
     parse_tree = parser.parse(pos_tags)
     parse_tree.pretty_print()
+
+def getSemanticInfo(doc):
+    info = []
+    for token in doc:
+        info.append(token.text)
+    return '\n'.join(info)
 
 def getImage(text:list):
     # Creating Doc object
