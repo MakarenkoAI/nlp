@@ -43,19 +43,28 @@
             <input type="submit" value="Save" style="display:none" name="save" id="save" title="Save the dictionary file">
             <span title="Save the dictionary file">Save</span>
         </label>
-        <label class="btn">
-            <input type="submit" value="Dictionary" style="display:none" name="dictionary" id="dictionary" title="Pass to dictionary-page">
-            <span title="Pass to dictionary-page">Dictionary</span>
-        </label>
-       
+    </div>
 
+    <div class="left-btn">
+    <label class="btn">
+        <input type="submit" value="Dictionary" style="display:none" name="dictionary" id="dictionary" title="Pass to dictionary-page">
+        <span title="Pass to dictionary-page">Dictionary</span>
+    </label>
+    
+    <label class="btn">
+        <input type="submit" value="Chat" style="display:none" name="chat" id="dictionary" title="Pass to chat-page">
+        <span title="Pass to chat-page">Chat</span>
+    </label>
+
+    <label class="btn">
+        <input type="submit" value="SaveD" style="display:none" name="saveD" id="saveD" title="Save the dictionary file">
+        <span title="Save the dictionary file">Save in dialog</span>
+    </label>
     </div>
-    {% if help_text %}
-    <div id="some_flag" title="Some Flag">
-        <p>{{help_text}}</p>
+
+    
     </div>
-    {% endif %}
-    </div>
+
     </form>
 
         <div id="popup">
@@ -84,7 +93,7 @@
             const listString = list.join("\n");
             textarea.value = listString;
           </script>
-         
+
         </br></br></br>
         <div class="wrapper">
         <div class="scrolls">   

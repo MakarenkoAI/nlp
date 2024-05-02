@@ -1,2 +1,169 @@
 
-lala => ROOT
+User => nsubj
+: => punct
+Tell => ROOT
+about => prep
+literature => pobj
+.
+=> punct
+Bookie => nmod
+: => punct
+Literature => nsubj
+refers => ROOT
+to => prep
+written => amod
+works => pobj
+, => punct
+particularly => advmod
+those => appos
+considered => acl
+to => aux
+have => xcomp => dep
+artistic => amod
+or => cc
+intellectual => conj
+value => dobj
+, => punct
+as => mark
+opposed => advcl
+to => prep
+commercial => amod
+or => cc
+technical => conj
+writing => pobj
+.
+=> punct
+It => nsubj => dep
+encompasses => ROOT
+a => det
+wide => amod
+range => dobj
+of => prep
+genres => pobj
+, => punct
+including => prep
+poetry => pobj
+, => punct
+novels => conj
+, => punct
+short => amod
+stories => conj
+, => punct
+plays => conj
+, => punct => dep
+and => cc
+essays => conj
+.
+=> punct
+Literature => nsubj
+often => advmod
+reflects => ROOT
+the => det
+culture => dobj
+, => punct
+values => conj
+, => punct
+and => cc
+experiences => conj
+of => prep
+a => det
+society => pobj
+.
+=> punct
+It => nsubj
+can => aux => dep
+teach => ROOT
+us => dobj
+about => prep
+history => pobj
+, => punct
+politics => conj
+, => punct
+philosophy => conj
+, => punct
+and => cc
+other => amod
+subjects => conj
+.
+=> punct
+It => nsubj
+can => aux
+also => advmod
+help => ROOT
+us => nsubj => dep
+to => aux
+understand => ccomp
+ourselves => dobj
+and => cc
+the => det
+world => conj
+around => prep
+us => pobj
+.
+=> punct
+Some => det
+famous => amod
+authors => nsubj
+of => prep
+literature => pobj
+include => ROOT
+William => compound
+Shakespeare => dobj
+, => punct
+Jane => compound
+Austen => appos
+, => punct
+Charles => compound => dep
+Dickens => conj
+, => punct
+and => cc
+James => compound
+Joyce => conj
+.
+=> punct
+These => det
+authors => nsubjpass
+are => auxpass
+known => ROOT
+for => prep
+their => poss
+contributions => pobj
+to => prep => dep
+literature => pobj
+, => punct
+and => cc
+their => poss
+works => nsubjpass
+are => aux
+still => advmod
+widely => advmod
+read => conj
+and => cc
+studied => conj
+today => npadvmod
+.
+=> punct
+Literature => nsubj
+is => ROOT
+an => det
+important => amod
+part => attr
+of => prep
+our => poss
+culture => pobj
+and => cc
+history => conj
+, => punct
+and => cc
+it => nsubj
+continues => conj
+to => aux => dep
+inspire => xcomp
+and => cc
+entertain => conj
+people => dobj
+all => advmod
+over => prep
+the => det
+world => pobj
+.

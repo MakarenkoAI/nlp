@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<base href="http://localhost:8000/"/>
+<link href="static/css/main_page.css" rel="stylesheet"/>
+<link href="static/css/chat.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&amp;display=swap" rel="stylesheet"/>
+<title>language</title>
+</head>
+
+<body>
+<form action="chat" enctype="multipart/form-data" method="POST">
+        {% csrf_token %}
+    <div id="main" class="main">
+        <div class="chatBot" class="main__item">
+            <header>
+            <h2>Ask Bookie</h2>
+            </header>
+            <ul class="chatbox">
+                <li class="chat-incoming chat">
+                <p>Hello. I am Bookie. Let's find out more about literature!</p>
+                </li>
+                {%if items%}
+                {%for item in items%}
+                <li class="chat-outgoing chat">
+                    <p>{{item.first}}</p>
+                </li>
+                <li class="chat-incoming chat">
+                    <p>{{item.second}}</p>
+                </li>
+                {%endfor%}
+                {%endif%}
+            </ul>
+            <div class="chat-input">
+                <textarea cols="17" id="inputtext" name="inputtext" placeholder="Enter a message..." rows="0"></textarea>
+                <div class="buttons">
+                <div class="left-btn">
+                    <label class="btn">
+                    <input id="Send" name="Send" style="display:none" title="Send a message" type="submit" value="Send"/>
+                    <span title="Pass to main-page">Send</span>
+                </label>
+                </div>
+                </div>
+            </div>
+        </div>
+        <div class="main__item"> 
+        </br></br></br></br></br></br>
+            <img src="static\images\rabbit5.svg" width="500"/>
+        </div>
+    </div>
+        <div class="buttons">
+            <div class="left-btn">
+            <label class="btn">
+                <input id="return" name="return" style="display:none" title="Pass to main-page" type="submit" value="Return"/>
+                <span title="Pass to main-page">Return</span>
+            </label>
+            <label class="btn">
+                <input type="submit" value="Save" style="display:none" name="save" id="save"  title="Update the dialog">
+                <span  title="Update the dialog">Save</span>
+            </label>
+        </div>
+  </div>
+  
+</form>
+    <div id="popup">
+        <div class="popup-content">
+        <textarea id="help" readonly=""></textarea>
+        </div>
+    </div>
+    <button id="toggle-popup">?</button>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+        var toggleButton = document.getElementById('toggle-popup');
+        var popup = document.getElementById('popup');
+        popup.style.display = 'none';
+        toggleButton.addEventListener('click', function() {
+            if (popup.style.display === 'block') {
+            popup.style.display = 'none';
+            } else {
+            popup.style.display = 'block';
+            }
+        });
+        });
+    </script>
+    <script>
+        const textarea = document.getElementById("help");
+        const list = ["Ask for a question about literature!", "1)Type your question", "2)Click on the Send-button", "3)Wait some time", "4)Know more about literature!","", "Click on \"Return\" to pass on main page"];
+        const listString = list.join("\n");
+        textarea.value = listString;
+    </script>
+   
+</body>
+</html>

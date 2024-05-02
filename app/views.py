@@ -1,14 +1,19 @@
 from django.shortcuts import render, redirect
 from app.tools import *
 from app.syntax_analysis import *
+from app.script import *
 from django.http import HttpResponse
+from bs4 import BeautifulSoup as Soup
+from fpdf import FPDF
+import textwrap
+
 __INPUT = None
 __OUTPUT = None
+__HISTORY = []
 
 def homePageView(request):
     global __INPUT
     global __OUTPUT
-    
     if request.POST.get("translate") and request.POST.get("input_text"):
         __INPUT = request.POST.get("input_text")
         lines = get_lines(__INPUT)
@@ -28,11 +33,18 @@ def homePageView(request):
     if request.POST.get("save") and request.POST.get("output_text"):
         __INPUT = request.POST.get("input_text")
         __OUTPUT = request.POST.get("output_text")
-        writeInFile(__OUTPUT)
+        writeInFile(__OUTPUT, "dictionary.txt")
+        return render(request, 'main_page.html', { 'input': __INPUT, "output": __OUTPUT}) 
+    if request.POST.get("saveD") and request.POST.get("input_text"):
+        __INPUT = request.POST.get("input_text")
+        writeInDialog(__INPUT, "dialog.pdf")
         return render(request, 'main_page.html', { 'input': __INPUT, "output": __OUTPUT}) 
     
     if request.POST.get("dictionary"):  
         return redirect('dictionary')
+    
+    if request.POST.get("chat"):  
+        return redirect('chat')
         
     return render(request, 'main_page.html')
     
@@ -48,7 +60,7 @@ def dictPageView(request):
         return render(request, 'dictionary.html', {'text': lines})
     if request.POST.get("savedict"):
         text = request.POST.get("dict_text")
-        writeInFile(text)
+        writeInFile(text, "dictionary.txt")
         return render(request, 'dictionary.html', {'text': text})
     if request.POST.get("return") == 'Return':
         return redirect('home')
@@ -56,6 +68,34 @@ def dictPageView(request):
         clearFile()
         return render(request, 'dictionary.html')
 
+class objecT():
+    def __init__(self, answer, inputtext):
+        self.first = inputtext
+        self.second = answer
+
+def chatPageView(request):
+    chat = J2ChatAI()
+    global __HISTORY
+    print(request.POST)
+    if request.POST.get("return") == 'Return':
+        return redirect('home')
+    if request.POST.get("Send") and request.POST.get("inputtext"):
+        inputtext = request.POST.get("inputtext")
+        messages[1]['text'] = inputtext
+        response = chat.make_request_to_chat(messages, model_description)
+        answer = str(response['outputs'][0]['text'])
+        v = objecT(answer, inputtext)
+        __HISTORY.insert(0, v)
+        return render(request, 'chat.html', {'items': __HISTORY})
+    if request.POST.get("save"):
+        text = ''
+        for el in reversed(__HISTORY):
+            text += f'User: {el.first}\n'
+            text += f'Bookie: {el.second}\n'
+        writeInDialog(text, "dialog.pdf")
+        return render(request, 'chat.html', {'items': __HISTORY})
+    return render(request, 'chat.html',  {'items': __HISTORY})
+    
 def saveSentences(text):
     with open("sentences.txt", "r", encoding="utf-8") as file:
         textOld= file.read()
@@ -107,15 +147,47 @@ def get_xml_text_from_dict(dictionary:dict)->str:
     text += "</text>\n"
     return text
 
-def writeInFile(output:str) :
+def writeInDialog(text:str, filename) :
+    # pdf = FPDF()
+    # pdf.add_page()
+    # pdf.set_font("Arial", size = 14)
+    # pdf.cell(200, 10, txt = output, align = 'C')
+    # pdf.output(filename)   
+    a4_width_mm = 210
+    pt_to_mm = 0.35
+    fontsize_pt = 10
+    fontsize_mm = fontsize_pt * pt_to_mm
+    margin_bottom_mm = 10
+    character_width_mm = 7 * pt_to_mm
+    width_text = a4_width_mm / character_width_mm
+
+    pdf = FPDF(orientation='P', unit='mm', format='A4')
+    pdf.set_auto_page_break(True, margin=margin_bottom_mm)
+    pdf.add_page()
+    pdf.set_font(family='Courier', size=fontsize_pt)
+    splitted = text.split('\n')
+
+    for line in splitted:
+        lines = textwrap.wrap(line, width_text)
+
+        if len(lines) == 0:
+            pdf.ln()
+
+        for wrap in lines:
+            pdf.cell(0, fontsize_mm, wrap, ln=1)
+
+    pdf.output(filename, 'F')
+
+def writeInFile(output:str, filename) :
     rez = ''
-    with open("dictionary.txt", "r", encoding="utf-8") as fileW:
+    with open(filename, "r", encoding="utf-8") as fileW:
         text = fileW.read()
         output = get_lines(output)
+        print(output)
         for el in output:
             if el not in text:
                 rez += '\n' + el
-    with open("dictionary.txt", "w", encoding="utf-8") as file:
+    with open(filename, "w", encoding="utf-8") as file:
         file.write(clear(rez))
     return
 
